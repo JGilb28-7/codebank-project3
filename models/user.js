@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     }*/
   },
   taxID: {
-    type: text,
+    type: Number,
     required: true
     // format Max 9 digits 000-00-0000
     // needs to turn to stars as being typed
@@ -56,7 +56,7 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   zip: {
-    type: text,
+    type: Number,
     required: true
   },
   phone: {
@@ -64,7 +64,7 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   cellPhone: {
-    type: text,
+    type: Number,
     required: true
   },
   userId: {
