@@ -14,10 +14,6 @@ const userSchema = new mongoose.Schema({
     type: text,
     required: true
   },
-  middleInital: {
-    type: text,
-    required: true
-  },
   email: {
     type: text,
     required: true
@@ -39,6 +35,53 @@ const userSchema = new mongoose.Schema({
     return false;
     }
     }*/
+  },
+  taxID: {
+    type: text,
+    required: true
+    // format Max 9 digits 000-00-0000
+    // needs to turn to stars as being typed
+    // acts as unique ID to call up a user 
+  },
+  street: {
+    type: text,
+    required: true
+  },
+  city: {
+    type: text,
+    required: true
+  }, 
+  state: {
+    type: text,
+    required: true
+  },
+  zip: {
+    type: text,
+    required: true
+  },
+  phone: {
+    type: text,
+    required: true
+  },
+  cellPhone: {
+    type: text,
+    required: true
+  },
+  userId: {
+    type: text,
+    required: true
+  },
+  password: {
+    type: text,
+    required: true
+  },
+  securityAns1: {
+    type: text,
+    required: true
+  },
+  securityAns2: {
+    type: text,
+    required: true
   },
 
 });
