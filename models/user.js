@@ -7,15 +7,15 @@ const Schema = mongoose.Schema;
 const userSchema = new mongoose.Schema({
 
   firstName: {
-    type: text,
+    type: String,
     required: true
   },
   lastName: {
-    type: text,
+    type: String,
     required: true
   },
   email: {
-    type: text,
+    type: String,
     required: true
     //JSG - add validation for email 
     //https://www.w3resource.com/javascript/form/email-validation.php
@@ -36,56 +36,52 @@ const userSchema = new mongoose.Schema({
     }
     }*/
   },
-  taxID: {
-    type: Number,
-    required: true
+ // taxID: {
+   // type: Number,
+    //required: true
     // format Max 9 digits 000-00-0000
     // needs to turn to stars as being typed
     // acts as unique ID to call up a user 
-  },
-  street: {
-    type: text,
+ // },
+ /* street: {
+    type: String,
     required: true
   },
   city: {
-    type: text,
+    type: String,
     required: true
   }, 
   state: {
-    type: text,
+    type: String,
     required: true
   },
   zip: {
     type: Number,
     required: true
-  },
-  phone: {
-    type: text,
+  },*/
+  phoneNumber: {
+    type: String,
     required: true
   },
-  cellPhone: {
-    type: Number,
-    required: true
-  },
-  userId: {
-    type: text,
+ 
+  userName: {
+    type: String,
     required: true
   },
   password: {
-    type: text,
+    type: String,
     required: true
   },
-  securityAns1: {
-    type: text,
+  /*securityAns1: {
+    type: String,
     required: true
   },
   securityAns2: {
-    type: text,
+    type: String,
     required: true
-  },
+  },*/
 
 });
 
 const User = mongoose.model("User", userSchema);
-
 module.exports = User;
