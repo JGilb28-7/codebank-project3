@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const db = require("../database/models/user");
 
 // This file empties the Books collection and inserts the books below
 
@@ -12,7 +12,7 @@ const userSeed = [
         lastName: "Edwards",
         phoneNumber:"(179)-998-3204",
         email:"imogen.edwards@example.com",
-        userName:"silversnake277",
+        username:"silversnake277",
         password:"clifford",
         date: new Date(Date.now())
       },
@@ -21,7 +21,7 @@ const userSeed = [
         lastName: "Torres",
         phoneNumber:"016974 94194",
         email:"jessica.torres@example.com",
-        userName:"2lazyelephant670",
+        username:"2lazyelephant670",
         password:"2ticklish",
         date: new Date(Date.now())
       },
@@ -30,7 +30,7 @@ const userSeed = [
         lastName: "Edwards",
         phoneNumber:"(179)-998-3204",
         email:"2imogen.edwards@example.com",
-        userName:"2silversnake277",
+        username:"2silversnake277",
         password:"2clifford",
         date: new Date(Date.now())
       },
@@ -39,7 +39,7 @@ const userSeed = [
         lastName: "Gorres",
         phoneNumber:"016974 94194",
         email:"3jessica.gorres@example.com",
-        userName:"3lazyelephant670",
+        username:"3lazyelephant670",
         password:"3ticklish",
         date: new Date(Date.now())
       },
@@ -54,3 +54,5 @@ const userSeed = [
     console.error(err);
     process.exit(1);
   });
+
+  module.exports = mongoose.connection;
