@@ -1,9 +1,20 @@
-// //import axios from "axios";
+import axios from "axios";
 
-// // The getRecipes method retrieves recipes from the server
-// // It accepts a "query" or term to search the recipe api for
-// /*export default {
-//   getRecipes: function(query) {
-//     return axios.get("/api/recipes", { params: { q: query } });
-//   }
-// };
+export default {
+  // Gets all employees
+  getEmployees: function () {
+    return axios.get("/api/employees");
+  },
+  // Gets the book with the given id
+  getEmployee: function (id) {
+    return axios.get("/api/employees/" + id);
+  },
+  // Deletes the book with the given id
+  deleteEmployee: function (id) {
+    return axios.delete("/api/employees/" + id);
+  },
+  // Saves a book to the database
+  saveEmployee: function (employeeData) {
+    return axios.post("/api/employees", employeeData);
+  },
+};
