@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
-const db = require("../database/models/user");
+
+const db = require("../database/models");
 
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codebank");
-const userSeed = [
+const employeeSeed = [
   {
     firstName: "Imogen",
     lastName: "Edwards",
@@ -126,8 +127,8 @@ const userSeed = [
     date: new Date(Date.now()),
   },
 ];
-db.User.remove({})
-  .then(() => db.User.insertMany(userSeed))
+db.Employee.remove({})
+  .then(() => db.Employee.collection.insertMany(employeeSeed))
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
