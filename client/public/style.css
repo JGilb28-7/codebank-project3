@@ -1,0 +1,121 @@
+* {
+    font-family: "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    color: dimgray;
+  }
+  
+  .navbar-text-size {
+    font-size: 22px;
+  }
+  
+  .logo {
+    color: cornflowerblue;
+    font-family: "Fredoka One", cursive;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .heading {
+    margin-top: 100px;
+    font-family: "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    font-size: 50px;
+  }
+  
+  .img-margin {
+    margin-top: 15px;
+  }
+  
+  .login {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .width {
+    width: 350px;
+  }
+  
+  .form-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .signUpPrompt {
+    margin-top: 15px;
+  }
+  
+  .details-font-size {
+    font-size: 20px;
+  }
+  
+  .choosing-to-bank {
+    margin-top: 35px;
+    font-size: 35px;
+  }
+  
+  .sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 80px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #2196f3;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #064579;
+  }
+  
+  .main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  
+  .nowLogIn {
+    font-size: 20px;
+  }
+  
+  .trans-btns {
+    width: 150px;
+  }
+  
+  .trans-fields {
+   margin-top: 8px; 
+  }
+
+  .inline {
+      display: inline-block;
+  }
+  
+  .home-btn-width {
+    width: 200px;
+  }
+
+  .slide-right {
+    animation: 2s slide-right 0s forwards;
+      transform:translateX(-100%);
+  }
+  
+  @keyframes slide-right {
+    to {
+      transform:translateX(0);
+    }
+  }
