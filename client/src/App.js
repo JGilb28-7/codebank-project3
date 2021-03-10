@@ -11,7 +11,7 @@ import { Container, Row, Col } from "./components/Grid";*/
 import Signup from "./components/Signup";
 import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
-import Employees from "./Pages/employees";
+import Employees from "./Pages/Employees";
 
 class App extends Component {
   constructor() {
