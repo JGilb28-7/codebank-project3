@@ -1,4 +1,4 @@
-const router = require("express").Router();
+/*const router = require("express").Router();
 const employeesController = require("../controllers/employeeController");
 
 // Matches with "/api/employees"
@@ -14,4 +14,4 @@ router
   .put(employeesController.update)
   .delete(employeesController.remove);
 
-module.exports = router;
+module.exports = router;*/

@@ -1,3 +1,7 @@
+//module.exports = {
+  //Employee: require("./employee"),
+//};
+
 module.exports = {
-  Employee: require("./employee"),
+  User: require("./user"),
 };

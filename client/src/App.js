@@ -11,7 +11,8 @@ import { Container, Row, Col } from "./components/Grid";*/
 import Signup from "./components/Signup";
 import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
-import Employees from "./Pages/Employees";
+import Employee from "./Pages/employees";
+import Host from './Pages/Host';
 
 class App extends Component {
   constructor() {
@@ -63,10 +64,12 @@ class App extends Component {
             <Route
               path="/login"
               render={() => <LoginForm updateUser={this.updateUser} />}
-            />
+            />  
 
-            <Route path="/employees" render={() => <Employees />} />
+            <Route path="/employee" render={() => <Employee />} />
             <Route path="/signup" render={() => <Signup />} />
+            <Route path="/Host" render={() => <Host />} />
+
           </Switch>
         </BrowserRouter>
       </div>
