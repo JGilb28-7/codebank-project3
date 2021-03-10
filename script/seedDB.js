@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+
 const db = require("../database/models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codebank");
-const userSeed = [
+const employeeSeed = [
   {
     firstName: "Cathy",
     lastName: "Neal",
@@ -157,7 +158,7 @@ const userSeed = [
     accountBalance3: "25000.00",
     rate3:"3.00", 
     date: new Date(Date.now()),
-      },
+    },
 	{
   	firstName: "Imogen",
     lastName: "Edwards",
@@ -222,6 +223,8 @@ const userSeed = [
 
   db.User.remove ({})
   .then(() => db.User.insertMany(userSeed))
+  },
+];
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
