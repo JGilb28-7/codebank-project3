@@ -7,11 +7,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 // const apiRoutes = require("./routes/apiRoutes");
 const user = require("./routes/user");
-const MongoStore = require("connect-mongo")(session);
-const passport = require("./passport");
-
-const Employees = require("./routes/employees");
-
+//const Employees = require("./routes/employees");
+const MongoStore = require('connect-mongo')(session)
+const passport = require('./passport')
 
 // Define middleware here
 app.use(morgan("dev"));
