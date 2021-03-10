@@ -8,7 +8,7 @@ import { index, Input, TextArea, FormBtn } from "../components/Form";
 
 function Employees() {
   // Setting our component's initial state
-  const [employees, setEmployees] = useState([]);
+  const [user, setUser] = useState([]);
   const [formObject, setFormObject] = useState({
     firstName: "",
     lastName: "",
@@ -28,14 +28,14 @@ function Employees() {
 
   // Loads all books and sets them to books
   function loadEmployees() {
-    API.getEmployees()
-      .then((res) => setEmployees(res.data))
+    API.getUser()
+      .then((res) => setUser(res.data))
       .catch((err) => console.log(err));
   }
 
   // Deletes an employee from the database with a given id, then reloads employees from the db
   function deleteEmployee(id) {
-    API.deleteEmployee(id)
+    API.deleteUser(id)
       .then((res) => loadEmployees())
       .catch((err) => console.log(err));
   }
@@ -51,7 +51,7 @@ function Employees() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.firstName && formObject.lastName) {
-      API.saveEmployee({
+      API.saveUser({
         firstName: formObject.firstName,
         lastName: formObject.lastName,
         role: formObject.role,
@@ -154,17 +154,17 @@ function Employees() {
           {/* <Jumbotron>
             <h1>Employees On My List</h1>
           </Jumbotron> */}
-          {employees.length ? (
+          {user.length ? (
             <List>
-              {employees.map((employee) => {
+              {user.map((user) => {
                 return (
-                  <ListItem key={employee._id}>
-                    <a href={"/employees/" + employee._id}>
+                  <ListItem key={user._id}>
+                    <a href={"/employees/" + user._id}>
                       <strong>
-                        {employee.firstName} by {employee.lastName}
+                        {user.firstName} by {user.lastName}
                       </strong>
                     </a>
-                    <DeleteBtn onClick={() => deleteEmployee(employee._id)} />
+                    <DeleteBtn onClick={() => deleteEmployee(user._id)} />
                   </ListItem>
                 );
               })}

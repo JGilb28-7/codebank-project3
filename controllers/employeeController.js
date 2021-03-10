@@ -1,4 +1,4 @@
-const db = require("../database/models");
+/*const db = require("../database/models");
 
 // Defining methods for the employeesController
 module.exports = {
@@ -29,4 +29,4 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-};
+};*/
