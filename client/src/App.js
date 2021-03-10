@@ -12,7 +12,6 @@ import Signup from "./components/Signup";
 import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
 import Employees from "./Pages/Employees";
-import Host from "./Pages/Host";
 
 class App extends Component {
   constructor() {
@@ -66,9 +65,8 @@ class App extends Component {
               render={() => <LoginForm updateUser={this.updateUser} />}
             />
 
-            <Route path="./Employees" render={() => <Employees />} />
+            <Route path="/employees" render={() => <Employees />} />
             <Route path="/signup" render={() => <Signup />} />
-            <Route path="/Host" render={() => <Host />} />
           </Switch>
         </BrowserRouter>
       </div>

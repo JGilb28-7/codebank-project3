@@ -1,3 +1,4 @@
+// Need to add in the User Schema
 const { text } = require("express");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
@@ -6,33 +7,81 @@ mongoose.promise = Promise;
 
 const userSchema = new mongoose.Schema({
 
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  email: { type: String, required: true },
-  taxId: { type: Number }, 
-  role: { type: String, required: true },
-  roleID: { type: Number, required: true },
-  address: { type: String, required: true },
-  city: { type: String, required: true }, 
-  state: { type: String, required: true },
-  zip: { type: Number, required: true},
-  phoneNumber: { type: String, required: true },
-  username: { type: String, },
-  password: { type: String, required: true},
-  securityAns1: { type: String, required: true },
-  securityAns2: { type: String, required: true },
-  accountTpye1: { type: String },
-  accountNum1: { type: Number },
-  accountBalance1: { type: Number },
-  rate1: { type: Number },
-  accountTpye2: { type: String },
-  accountNum2: { type: Number },
-  accountBalance2: { type: Number },
-  rate2: { type: Number },
-  accountTpye3: { type: String },
-  accountNum3: { type: Number },
-  accountBalance3: { type: Number },
-  rate3: { type: Number },
+  firstName: {
+    type: String,
+
+  },
+  lastName: {
+    type: String,
+
+  },
+  email: {
+    type: String,
+
+    //JSG - add validation for email 
+    //https://www.w3resource.com/javascript/form/email-validation.php
+    /*function ValidateEmail(inputText)
+    {
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(inputText.value.match(mailformat))
+    {
+    alert("Valid email address!");
+    document.form1.text1.focus();
+    return true;
+    }
+    else
+    {
+    alert("You have entered an invalid email address!");
+    document.form1.text1.focus();
+    return false;
+    }
+    }*/
+  },
+ // taxID: {
+   // type: Number,
+    //required: true
+    // format Max 9 digits 000-00-0000
+    // needs to turn to stars as being typed
+    // acts as unique ID to call up a user 
+ // },
+ /* street: {
+    type: String,
+    required: true
+  },
+  city: {
+    type: String,
+    required: true
+  }, 
+  state: {
+    type: String,
+    required: true
+  },
+  zip: {
+    type: Number,
+    required: true
+  },*/
+  phoneNumber: {
+    type: String,
+    
+  },
+ 
+  username: {
+    type: String,
+  
+  },
+  password: {
+    type: String,
+
+  },
+  /*securityAns1: {
+    type: String,
+    required: true
+  },
+  securityAns2: {
+    type: String,
+    required: true
+  },*/
+
 });
 
 // Defining Schema methods

@@ -1,5 +1,5 @@
 
-const db = require("../database/models");
+const db = require("../models");
 module.exports = {
     findAll: function(req, res) {
       db.User

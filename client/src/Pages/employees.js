@@ -8,7 +8,7 @@ import { index, Input, TextArea, FormBtn } from "../components/Form";
 
 function Employees() {
   // Setting our component's initial state
-  const [user, setUser] = useState([]);
+  const [employees, setEmployees] = useState([]);
   const [formObject, setFormObject] = useState({
     firstName: "",
     lastName: "",
@@ -16,6 +16,7 @@ function Employees() {
     phoneNumber: "",
     email: "",
     age: "",
+    gender: "",
     userName: "",
     password: "",
   });
@@ -27,14 +28,14 @@ function Employees() {
 
   // Loads all books and sets them to books
   function loadEmployees() {
-    API.getUser()
-      .then((res) => setUser(res.data))
+    API.getEmployees()
+      .then((res) => setEmployees(res.data))
       .catch((err) => console.log(err));
   }
 
   // Deletes an employee from the database with a given id, then reloads employees from the db
   function deleteEmployee(id) {
-    API.deleteUser(id)
+    API.deleteEmployee(id)
       .then((res) => loadEmployees())
       .catch((err) => console.log(err));
   }
@@ -50,13 +51,14 @@ function Employees() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.firstName && formObject.lastName) {
-      API.saveUser({
+      API.saveEmployee({
         firstName: formObject.firstName,
         lastName: formObject.lastName,
         role: formObject.role,
         phoneNumber: formObject.phoneNumber,
         email: formObject.email,
         age: formObject.age,
+        gender: formObject.gender,
         userName: formObject.userName,
         password: formObject.password,
       })
@@ -68,6 +70,7 @@ function Employees() {
             phoneNumber: "",
             email: "",
             age: "",
+            gender: "",
             userName: "",
             password: "",
           })
@@ -123,6 +126,12 @@ function Employees() {
             />
             <Input
               onChange={handleInputChange}
+              name="gender"
+              placeholder="gender (required)"
+              value={formObject.gender}
+            />
+            <Input
+              onChange={handleInputChange}
               name="userName"
               placeholder="UserName (required)"
               value={formObject.userName}
@@ -145,17 +154,17 @@ function Employees() {
           {/* <Jumbotron>
             <h1>Employees On My List</h1>
           </Jumbotron> */}
-          {user.length ? (
+          {employees.length ? (
             <List>
-              {user.map((user) => {
+              {employees.map((employee) => {
                 return (
-                  <ListItem key={user._id}>
-                    <a href={"/employees/" + user._id}>
+                  <ListItem key={employee._id}>
+                    <a href={"/employees/" + employee._id}>
                       <strong>
-                        {user.firstName} by {user.lastName}
+                        {employee.firstName} by {employee.lastName}
                       </strong>
                     </a>
-                    <DeleteBtn onClick={() => deleteEmployee(user._id)} />
+                    <DeleteBtn onClick={() => deleteEmployee(employee._id)} />
                   </ListItem>
                 );
               })}
