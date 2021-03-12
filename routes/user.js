@@ -62,6 +62,19 @@ router.get('/', (req, res, next) => {
     }
 })
 
+router.get('/host', (req, res, next) => {
+    console.log('*****user*****')
+    console.log(req.user) ;
+})
+
+router.post('/host', (req, res) => {
+    if (req.user) {
+        res.send({ msg: 'loggging out' })
+    } else {
+        res.send({msg: 'no user to logout'})
+    }
+})
+
 // route for logging out the user. So this router will handle axios.post('/user/logout') request coming from client
 router.post('/logout', (req, res) => {
     if (req.user) {
