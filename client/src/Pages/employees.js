@@ -8,7 +8,7 @@ import { index, Input, TextArea, FormBtn } from "../components/Form";
 
 function Employees() {
   // Setting our component's initial state
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState({});
   const [formObject, setFormObject] = useState({
     firstName: "",
     lastName: "",
