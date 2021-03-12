@@ -42,7 +42,7 @@ app.use("/user", user);
 // Use apiRoutes
 // app.use("/api", apiRoutes);
 
-app.use("/", Employees);
+//app.use("/", Employees);
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
