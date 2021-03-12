@@ -13,6 +13,7 @@ import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
 import Employee from "./Pages/employees";
 import Host from './Pages/Host';
+import Home from './Pages/Home'
 
 class App extends Component {
   constructor() {
@@ -65,7 +66,8 @@ class App extends Component {
               path="/login"
               render={() => <LoginForm updateUser={this.updateUser} />}
             />  
-
+            
+            <Route path="/" render={() => <Home />} />
             <Route path="/employee" render={() => <Employee />} />
             <Route path="/signup" render={() => <Signup />} />
             <Route path="/Host" render={() => <Host />} />
