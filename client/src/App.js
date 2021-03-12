@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Route, Switch } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 /*import Jumbotron from "./components/Jumbotron";
 import Nav from "./components/Nav";
 import Input from "./components/Input";
@@ -14,6 +15,7 @@ import { BrowserRouter } from "react-router-dom";
 import Employee from "./Pages/employees";
 import Host from './Pages/Host';
 import Home from './Pages/Home'
+import SignUpForm from "./Pages/Sign-Up-New";
 
 class App extends Component {
   constructor() {
@@ -67,7 +69,11 @@ class App extends Component {
               render={() => <LoginForm updateUser={this.updateUser} />}
             />  
             
-            <Route path="/" render={() => <Home />} />
+            <Route exact path="/">
+                <Redirect to="/home" />
+            </Route>
+            <Route path="/home" render={() => <Home />} />
+            <Route path="/signup-new" render={() => <SignUpForm />} />
             <Route path="/employee" render={() => <Employee />} />
             <Route path="/signup" render={() => <Signup />} />
             <Route path="/Host" render={() => <Host />} />

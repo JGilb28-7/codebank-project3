@@ -109,5 +109,16 @@
   .trans-fields {
    margin-top: 8px; 
   }
+
+  .slide-right {
+    animation: 2s slide-right 0s forwards;
+      transform:translateX(-100%);
+  }
+
+  @keyframes slide-right {
+    to {
+      transform:translateX(0);
+    }
+  }
   
   
