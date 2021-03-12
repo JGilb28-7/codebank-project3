@@ -11,17 +11,20 @@ import Nav from "../components/Nav/NavBar.js";
 //import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import Footer from "../components/Footer";
+//import Signup from "../components/Signup"
+
 
 function Host(props) {
   const [user, setUser] = useState({})
 
-  //const {id} = useParams()
-  
-  useEffect(() => {
-    //API.getUser(id)
-      //.then(res => setUser(res.data))
+  //const { id } = useParams()
+  //has to be a destructed 
+
+ // useEffect(() => {
+   // API.getUser(id)
+     // .then(res => setUser(res.data))
       //.catch(err => console.log(err));
-  }, [])
+  //}, [])
 
   return (
       <Container fluid>
