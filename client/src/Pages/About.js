@@ -25,7 +25,7 @@ function About () {
                             <p class='about-logo'>j</p> 
                         </div>
                         <div class='col-md-11'>
-                        <p class='about-text'>James Coughlin: <span class='email-text'><a href="mailto:????">???????</a></span></p>
+                        <p class='about-text'>James Coughlin: <span class='email-text'><a href="https://github.com/mrjacoughlin" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
@@ -34,7 +34,7 @@ function About () {
                             <p class='about-logo'>j</p> 
                         </div>
                         <div class='col-md-11'>
-                        <p class='about-text'>Jon Gilbert: <span class='email-text'><a href="mailto:jgilbert4728@gmail.com">jgilbert4728@gmail.com</a></span></p>
+                        <p class='about-text'>Jon Gilbert: <span class='email-text'><a href="https://github.com/JGilb28-7" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ function About () {
                             <p class='about-logo'>w</p> 
                         </div>
                         <div class='col-md-11'>
-                            <p class='about-text'>William Appleton: <span class='email-text'><a href="mailto:william.appleton02@gmail.com">william.appleton02@gmail.com</a></span></p>
+                            <p class='about-text'>William Appleton: <span class='email-text'><a href="https://github.com/william-appleton" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
@@ -52,7 +52,7 @@ function About () {
                             <p class='about-logo'>a</p> 
                         </div>
                         <div class='col-md-11'>
-                        <p class='about-text'>Ala DeCoste: <span class='email-text'><a href="mailto:?????">???????</a></span></p>
+                        <p class='about-text'>Ala DeCoste: <span class='email-text'><a href="https://github.com/decoste" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 

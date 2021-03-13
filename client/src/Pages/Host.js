@@ -60,12 +60,14 @@ function Host(props) {
         </Row>
         <Row>
           <Col size="md-12">
+            <div class='host-bttm'>
             <Card>
               <h1>
                 Statement Here
               </h1>
               <Button>Get Statement</Button>
             </Card>
+            </div>
           </Col>
         </Row>
         <Footer></Footer>

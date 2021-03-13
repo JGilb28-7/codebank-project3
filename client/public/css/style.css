@@ -149,7 +149,7 @@
   }
 
   .email-text {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .about1 {
@@ -196,4 +196,7 @@
     }
   }
 
-  
+  /*Host Page*/
+  .host-bttm {
+    margin-bottom: 120px;
+  }
