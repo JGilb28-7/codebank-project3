@@ -2,6 +2,7 @@ import React from "react";
 import BlueButton from "../components/BlueButton/BlueButton";
 import Nav from "../components/Nav/NavBar";
 import HomePic from '../assets/open-banking-financial-technology-finance-financial-services-lays-dd7d5386abc311f2ccf635a4f5480906.png';
+import Footer from '../components/Footer/index'
 
 function Home () {
     return (
@@ -26,6 +27,8 @@ function Home () {
                 </div>
             </div>
         </div>
+
+        <Footer />
 
     </div>
 

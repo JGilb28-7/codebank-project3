@@ -1,6 +1,7 @@
 import React from "react";
 import FormComp from '../components/Sign-Up-New/Sign-Up-New'
 import Nav from "../components/Nav/NavBar";
+import Footer from '../components/Footer/index';
 
 function SignUpForm() {
     return (
@@ -18,6 +19,8 @@ function SignUpForm() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
 
         </div>
 
