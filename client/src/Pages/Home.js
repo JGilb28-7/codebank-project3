@@ -19,10 +19,10 @@ function Home () {
                 </div>
 
                 <div class="col-md-6">
-                    <img
-                        class="img-fluid img-margin"
+                    <img 
+                        class="img-fluid img-margin" 
                         src={HomePic} 
-                        alt="bank-collage-image"
+                        alt="bank-collage"
                     />
                 </div>
             </div>
