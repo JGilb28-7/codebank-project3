@@ -18,6 +18,7 @@ import Home from './Pages/Home'
 import SignUpForm from "./Pages/Sign-Up-New";
 import About from "./Pages/About";
 import Thanks from "./Pages/Thanks";
+import Logout from "./Pages/Logout";
 
 class App extends Component {
   constructor() {
@@ -78,6 +79,7 @@ class App extends Component {
             <Route path="/home" render={() => <Home />} />
             <Route path="/about" render={() => <About />} />
             <Route path="/thanks" render={() => <Thanks />} />
+            <Route path="/logout" render={() => <Logout />} />
             <Route path="/signup-new" render={() => <SignUpForm />} />
             <Route path="/employee" render={() => <Employee />} />
             <Route path="/signup" render={() => <Signup />} />
