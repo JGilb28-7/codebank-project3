@@ -7,7 +7,7 @@ import Card from "../components/Card";
 //import user from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Button from "../components/Button";
-import Nav from "../components/Nav/NavBar.js";
+import Nav from '../components/LogoutNav/index'
 //import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import Footer from "../components/Footer";
