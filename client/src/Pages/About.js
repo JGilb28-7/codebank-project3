@@ -13,12 +13,14 @@ function About () {
             
             <div class="row">
                 <div class='text-center header-margin'>
+                    <h1>Welcome to our <br></br> <span class='motto'>j</span>oltingly <span class='motto'>j</span>ubilant <span class='motto'>b</span>aking <span class='motto'>a</span>pp!</h1>
+                    <br></br>
                     <h1>We are:</h1>
                 </div>  
             </div>
             
             <div class='row'>
-                <div class="col-md-12 margin-left-abt">
+                <div class="col-md-11 offset-md-1 ">
                    
                     <div class='row about1'>
                         <div class='col-md-1 text-center'>
@@ -47,7 +49,7 @@ function About () {
                         </div>
                     </div>
 
-                    <div class='row about4'>
+                    <div class='row about4 about-bttm-margin'>
                         <div class='col-md-1 text-center'>
                             <p class='about-logo'>a</p> 
                         </div>
