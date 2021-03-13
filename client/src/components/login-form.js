@@ -75,16 +75,17 @@ class LoginForm extends Component {
                                     <form id="login">  
                                         <div class="form-group">
                                             <input class="form-control form-margin"
-                                                placeholder="password"
-                                                type="password"
-                                                name="password"
-                                                value={this.state.password}
+                                                type="text"
+                                                id="username"
+                                                name="username"
+                                                placeholder="Username"
+                                                value={this.state.username}
                                                 onChange={this.handleChange}
                                             />
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control form-margin"
-                                                placeholder="password"
+                                                placeholder="Password"
                                                 type="password"
                                                 name="password"
                                                 value={this.state.password}
