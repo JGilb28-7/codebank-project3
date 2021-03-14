@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav/NavBar";
 import Footer from '../components/Footer/index'
+import MoneyPic from '../assets/SeekPng.com_cash-icon-png_1358929.png'
 
 function About () {
     return (
@@ -17,7 +18,8 @@ function About () {
                 </div>  
             </div>
             <div class='row'>
-                <div class="col-md-11 offset-md-1 ">
+                
+                <div class="col-md-8 offset-md-1 ">
                    
                     <div class='row about1'>
                         <div class='col-md-1 text-center'>
@@ -56,11 +58,19 @@ function About () {
                     </div>
 
                 </div>
+
+                <div class='col-md-3 d-flex align-items-center'>
+                    <img 
+                            class="img-fluid img-margin" 
+                            src={MoneyPic} 
+                            alt="dollar-bills"
+                        />
+                    </div>
             </div>
 
             <div class="row">
                 <div class='text-center about-bttm-margin'>
-                    <h1>And welcome to our <br></br> <span class='motto'>j</span>oltingly <span class='motto'>j</span>ubilant <span class='motto'>b</span>aking <span class='motto'>a</span>pp!</h1>
+                    <h1>And welcome to our <br></br> <span class='motto'>j</span>oltingly <span class='motto'>j</span>ubilant <span class='motto'>w</span>ealth <span class='motto'>a</span>pp!</h1>
                     <br></br>
                     <h3 class='italic'>Where banking is joyful.</h3>
                 </div>  
