@@ -22,37 +22,37 @@ function About () {
                 <div class="col-md-7 offset-md-1 ">
                    
                     <div class='row about1'>
-                        <div class='col-md-1 text-center'>
+                        <div class='col-md-2 text-center'>
                             <p class='about-logo'>j</p> 
                         </div>
-                        <div class='col-md-11'>
+                        <div class='col-md-10'>
                         <p class='about-text'>James Coughlin: <span class='email-text'><a href="https://github.com/mrjacoughlin" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
                     <div class='row about2'>
-                        <div class='col-md-1 text-center'>
+                        <div class='col-md-2 text-center'>
                             <p class='about-logo'>j</p> 
                         </div>
-                        <div class='col-md-11'>
+                        <div class='col-md-10'>
                         <p class='about-text'>Jon Gilbert: <span class='email-text'><a href="https://github.com/JGilb28-7" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
                     <div class='row about3'>
-                        <div class='col-md-1 text-center'>
+                        <div class='col-md-2 text-center'>
                             <p class='about-logo'>w</p> 
                         </div>
-                        <div class='col-md-11'>
+                        <div class='col-md-10'>
                             <p class='about-text'>William Appleton: <span class='email-text'><a href="https://github.com/william-appleton" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
                     <div class='row about4'>
-                        <div class='col-md-1 text-center'>
+                        <div class='col-md-2 text-center'>
                             <p class='about-logo'>a</p> 
                         </div>
-                        <div class='col-md-11'>
+                        <div class='col-md-10'>
                         <p class='about-text'>Ala DeCoste: <span class='email-text'><a href="https://github.com/decoste" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
