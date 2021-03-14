@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav/NavBar";
 import Footer from '../components/Footer/index'
-import MoneyPic from '../assets/SeekPng.com_cash-icon-png_1358929.png'
+import MoneyPic from '../assets/SeekPng.com_cash-icon-png_1358929-2.png'
 
 function About () {
     return (
@@ -19,7 +19,7 @@ function About () {
             </div>
             <div class='row'>
                 
-                <div class="col-md-8 offset-md-1 ">
+                <div class="col-md-7 offset-md-1 ">
                    
                     <div class='row about1'>
                         <div class='col-md-1 text-center'>
@@ -59,7 +59,7 @@ function About () {
 
                 </div>
 
-                <div class='col-md-3 d-flex align-items-center'>
+                <div class='col-md-4 d-flex align-items-center'>
                     <img 
                             class="img-fluid img-margin" 
                             src={MoneyPic} 
