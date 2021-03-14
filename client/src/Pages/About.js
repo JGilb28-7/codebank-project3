@@ -10,15 +10,12 @@ function About () {
         <Nav />
 
         <div class="container">
-            
+        
             <div class="row">
                 <div class='text-center header-margin'>
-                    <h1>Welcome to our <br></br> <span class='motto'>j</span>oltingly <span class='motto'>j</span>ubilant <span class='motto'>b</span>aking <span class='motto'>a</span>pp!</h1>
-                    <br></br>
-                    <h1>We are:</h1>
+                    <h1>Hello there! We're: </h1>
                 </div>  
             </div>
-            
             <div class='row'>
                 <div class="col-md-11 offset-md-1 ">
                    
@@ -49,7 +46,7 @@ function About () {
                         </div>
                     </div>
 
-                    <div class='row about4 about-bttm-margin'>
+                    <div class='row about4'>
                         <div class='col-md-1 text-center'>
                             <p class='about-logo'>a</p> 
                         </div>
@@ -60,6 +57,15 @@ function About () {
 
                 </div>
             </div>
+
+            <div class="row">
+                <div class='text-center about-bttm-margin'>
+                    <h1>And welcome to our <br></br> <span class='motto'>j</span>oltingly <span class='motto'>j</span>ubilant <span class='motto'>b</span>aking <span class='motto'>a</span>pp!</h1>
+                    <br></br>
+                    <h3 class='italic'>Where banking is joyful.</h3>
+                </div>  
+            </div>
+
         </div>
 
         <Footer />
