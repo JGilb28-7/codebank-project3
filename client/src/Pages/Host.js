@@ -1,7 +1,8 @@
 //import React, { Component } from 'react'
 //import { Redirect } from 'react-router-dom'
 //import axios from 'axios'
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import UserContext from '../utils/userContext'
 //import { useParams } from "react-router-dom";
 import Card from "../components/Card";
 //import user from "../utils/API";
@@ -14,18 +15,32 @@ import Footer from "../components/Footer";
 //import Signup from "../components/Signup"
 
 
-function Host(props) {
-  const [user, setUser] = useState({})
+function Host() {
+  const user = useContext(UserContext);
+  const [users, setUsers] = useState(
+    {
+      _id: ""
+    }
+  )
 
-  //const { id } = useParams()
-  //has to be a destructed 
-
- // useEffect(() => {
-   // API.getUser(id)
-     // .then(res => setUser(res.data))
-      //.catch(err => console.log(err));
-  //}, [])
-
+  useEffect(() => {
+       fetchUsers();
+   }, [user])
+ 
+   const _id = users
+   function fetchUsers() {
+    fetch(`/user/host/${_id}`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+    })
+      .then((res) => res.json())
+      .then((userData) => {
+        setUsers( userData);
+      });
+  }
   return (
       <Container fluid>
         <Nav>
@@ -36,6 +51,8 @@ function Host(props) {
               <h1>
                 User Data is going here
               </h1>
+               <p>Username: {users.username}</p>
+               <p>ID: {users._id}</p>
                 <p>user.firstName</p>
                 <p>user.LastName</p>
                 <p>user.account</p>

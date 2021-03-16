@@ -1,5 +1,3 @@
-// this is route.js file
-
 const express = require('express')
 const router = express.Router()
 const User = require('../database/models/user')
@@ -10,9 +8,7 @@ router.post('/', (req, res) => {
     console.log('user signup')
 
     const { username, password } = req.body;
-
-    // check to see that new user does not exists in the database and also there's no error while creating the new user
-    // Only after these two checks save the user in the database
+    
     User.findOne({ username: username }, (err, user) => {
         if (err) {
             console.log('User.js posting error: ', err);
@@ -35,37 +31,37 @@ router.post('/', (req, res) => {
 
 // For logging-in a user who is already signed-up
 router.post('/login',
-    (req, res, next) => {
-        console.log('routes/user.js, login, the value of req.body is: ') // line only for debugging for me
+    (req, res, next) => { 
         console.log(req.body)
-        /* the above is only for debugging and will print in the terminal -  { username: 'rohanpaul2@gmail.com', password: '123456' }  */
         next()
     },
     passport.authenticate('local'),
     (req, res) => {
         console.log('loggedin', req.user);
         var userInfo = {
-            username: req.user.username
+            username: req.user.username,
+            id: req.user._id,
         };
         res.send(userInfo)
     }
 )
 
 // Only a get route to see the user
-router.get('/', (req, res, next) => {
-    console.log('*****user*****')
-    console.log(req.user) ;
-    if (req.user) {
-        res.json({user: req.user})
-    } else {
-        res.json({user: null})
-    }
+
+
+router.get('/host/:id', (req, res, next) => {
+  
+    User.findById(req.user._id)
+    .then(function(users) {
+        res.json(users);
+        console.log("ID: " + req.user._id)
+    })
+    .catch(function(err) {
+       
+        console.log("Error:" + err)
+    });
 })
 
-router.get('/host', (req, res, next) => {
-    console.log('*****user*****')
-    console.log(req.user) ;
-})
 
 router.post('/host', (req, res) => {
     if (req.user) {
@@ -84,5 +80,14 @@ router.post('/logout', (req, res) => {
     }
 })
 
-module.exports = router;
+router.get('/', (req, res, next) => {
+    console.log('*****user*****')
+    console.log(req.user) ;
+    if (req.user) {
+        res.json({user: req.user})
+    } else {
+        res.json({user: null})
+    }
+})
 
+module.exports = router;
