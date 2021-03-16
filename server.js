@@ -12,7 +12,6 @@ const passport = require("./passport");
 
 const Employees = require("./routes/employees");
 
-
 // Define middleware here
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
