@@ -120,5 +120,93 @@
       transform:translateX(0);
     }
   }
-  
-  
+
+
+
+
+  /* About Page */
+
+  .header-margin {
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .motto {
+    color: cornflowerblue;
+    font-family: "Fredoka One", cursive;
+    font-size: 40px;
+    font-weight: 400; 
+  }
+
+  .about-logo {
+    color: cornflowerblue;
+    font-family: "Fredoka One", cursive;
+    font-size: 60px;
+    font-weight: 500;
+  }
+
+  .about-text {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .email-text {
+    font-size: 20px;
+  }
+
+  .about1 {
+    animation: 2s slide-right 0s forwards;
+      transform:translateX(-100%);
+  }
+
+  @keyframes about1 {
+    to {
+      transform:translateX(0);
+    }
+  }
+
+  .about2 {
+    animation: 2s slide-right .5s forwards;
+      transform:translateX(-100%);
+  }
+
+  @keyframes about2 {
+    to {
+      transform:translateX(0);
+    }
+  }
+
+  .about3 {
+    animation: 2s slide-right 1s forwards;
+      transform:translateX(-100%);
+  }
+
+  @keyframes about3 {
+    to {
+      transform:translateX(0);
+    }
+  }
+
+  .about4 {
+    animation: 2s slide-right 1.5s forwards;
+      transform:translateX(-100%);
+  }
+
+  @keyframes about4 {
+    to {
+      transform:translateX(0);
+    }
+  }
+
+  .about-bttm-margin {
+    margin-bottom: 100px;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  /*Host Page*/
+  .host-bttm {
+    margin-bottom: 120px;
+  }

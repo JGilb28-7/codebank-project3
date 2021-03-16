@@ -201,7 +201,7 @@ class FormComp extends React.Component {
               />
             </div>
             <div class='signup-submit'>
-                <BlueButton link='/login' text='Sign Up' type='submit' />
+                <BlueButton link='/thanks' text='Sign Up' type='submit' />
             </div>
             
         </div>
