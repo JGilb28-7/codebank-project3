@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   securityAns1: { type: String, required: true },
   securityAns2: { type: String, required: true },
+  initialDep: {type: Number, required: true },
   accountTpye1: { type: String },
   accountNum1: { type: Number },
   accountBalance1: { type: Number },
