@@ -69,7 +69,7 @@ function Host() {
               </h1>
                 <Button> Make a Transfer</Button>
                 
-                <Button> Make a deposit</Button>
+                <Button > Make a deposit</Button>
 
                 <Button> Make a withdrawal</Button>
             </Card>
