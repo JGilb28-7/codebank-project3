@@ -1,16 +1,34 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import './Sign-Up-New/Sign-Up-New.css'
+import Nav from './Nav/NavBar'
+import Footer from './Footer'
+
 
 class Signup extends Component {
 	constructor() {
 		super()
 		this.state = {
+			firstName: '',
+			lastName: '',
+			email: '',
+			age: null,
+			ageError: '',
+			address1: '',
+			address2: '',
+			city: '',
+			state: '',
+			zip: null,
+			zipError: '',
+			phone: null,
+			phoneError: '',
+			accountType: '',
+			initialDep: null,
 			username: '',
 			password: '',
 			confirmPassword: '',
 			redirectTo: null
-
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -55,61 +73,214 @@ render() {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
 			return (
-				<div className="SignupForm">
-					<h4>Sign up</h4>
-					<form className="form-horizontal">
-						<div className="form-group">
-							<div className="col-1 col-ml-auto">
-								<label className="form-label" htmlFor="username">Username</label>
-							</div>
-							<div className="col-3 col-mr-auto">
-								<input className="form-input"
-									type="text"
-									id="username"
-									name="username"
-									placeholder="Username"
-									value={this.state.username}
-									onChange={this.handleChange}
-								/>
-							</div>
-						</div>
-						<div className="form-group">
-							<div className="col-1 col-ml-auto">
-								<label className="form-label" htmlFor="password">Password: </label>
-							</div>
-							<div className="col-3 col-mr-auto">
-								<input className="form-input"
-									placeholder="password"
-									type="password"
-									name="password"
-									value={this.state.password}
-									onChange={this.handleChange}
-								/>
-							</div>
-						</div>
-						<div className="form-group">
-							<div className="col-1 col-ml-auto">
-								<label className="form-label" htmlFor="confirmPassword">Confirm Password: </label>
-							</div>
-							<div className="col-3 col-mr-auto">
-								<input className="form-input"
-									placeholder="confirm password"
-									type="password"
-									name="confirmPassword"
-									value={this.state.confirmPassword}
-									onChange={this.handleChange}
-								/>
-							</div>
-						</div>
-						<div className="form-group ">
-							<div className="col-7"></div>
-							<button
-								className="btn btn-primary col-1 col-mr-auto"
-								onClick={this.handleSubmit}
-								type="submit"
-							>Sign up</button>
-						</div>
-					</form>
+				
+				<div>
+					<Nav />
+
+					<div class="container">
+               			<div class="row">
+                     		<div class="col-md-7 col-md-offset-3">
+                        		<h1 class="choosing-to-bank">Thanks for choosing to bank with us!</h1>
+                         		<p class="details-font-size">We'll just need a few more details:</p>
+                        
+								
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="firstName"
+										placeholder="First Name"
+										name='firstName'
+										value={this.state.firstName}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="lastName"
+										placeholder="Last Name"
+										name='lastName'
+										value={this.state.lastName}
+										onChange={this.handleChange}
+									/>
+								</div>
+								
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="email"
+										placeholder="Email"
+										name='email'
+										value={this.state.email}
+										onChange={this.handleChange}
+									/>
+								</div>
+								
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="age"
+										placeholder="Age"
+										name='age'
+										value={this.state.age}
+										onChange={this.handleChange}
+									/>
+								</div>
+								
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="address1-input"
+										placeholder="Address 1"
+										name='address1'
+										value={this.state.address1}
+										onChange={this.handleChange}
+									/>
+								</div>
+								
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="address2-input"
+										placeholder="Address 2"
+										name='address2'
+										value={this.state.address2}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="city-input"
+										placeholder="City"
+										name='city'
+										value={this.state.city}
+										onChange={this.handleChange}
+									/>
+								</div>
+								 
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="state-input"
+										placeholder="State"
+										name='state'
+										value={this.state.state}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="zip-input"
+										placeholder="Zip Code"
+										name='zip'
+										value={this.state.zip}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="phone-input"
+										placeholder="Phone (Numbers Only)"
+										name='phone'
+										value={this.state.phone}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<select 
+										class="custom-select" 
+										id='accountType-input'
+										name='accountType'
+										value={this.state.accountType}
+										onChange={this.handleChange}>
+											<option selected>Choose Account Type</option>
+											<option value="checking">Checking</option>
+											<option value="savings">Savings</option>
+											<option value="investment">Investment</option>
+									</select>
+								 </div>
+
+								 <div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="initialDep-input"
+										placeholder="Initial Deposit Amount"
+										name='initialDep'
+										value={this.state.initialDep}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="text"
+										class="form-control"
+										id="username-input"
+										placeholder="Username"
+										name='username'
+										value={this.state.username}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="password"
+										class="form-control"
+										id="password-input"
+										placeholder="Password"
+										name='password'
+										value={this.state.password}
+										onChange={this.handleChange}
+									/>
+								</div>
+
+								<div class="form-group form-margin">
+									<input
+										type="password"
+										class="form-control"
+										id="confirm-password-input"
+										placeholder="Confirm Password"
+										name='password'
+										value={this.state.confirmpassword}
+										onChange={this.handleChange}
+									/>
+
+									<button
+										className="btn blue-btn btn-block signup-submit"
+										onClick={this.handleSubmit}
+										type="submit"
+										>
+										Sign up
+									</button>
+								
+								</div>
+						
+                    		</div>
+                		</div>
+            		</div>
+
+					<Footer />
+
 				</div>
 
 			)
