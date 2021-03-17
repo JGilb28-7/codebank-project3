@@ -13,16 +13,13 @@ class Signup extends Component {
 			firstName: '',
 			lastName: '',
 			email: '',
-			age: null,
-			ageError: '',
+			age: '',
 			address1: '',
 			address2: '',
 			city: '',
 			state: '',
 			zip: null,
-			zipError: '',
-			phone: null,
-			phoneError: '',
+			phoneNumber: null,
 			accountType: '',
 			initialDep: null,
 			username: '',
@@ -46,6 +43,18 @@ class Signup extends Component {
 
 		//request to server to add a new username/password
 		axios.post('/user/', {
+			firstName: this.state.firstName,
+			lastName: this.state.lastName,
+			email: this.state.email,
+			age: this.state.age,
+			address1: this.state.address1,
+			address2: this.state.address2,
+			city: this.state.city,
+			state: this.state.state,
+			zip: this.state.zip,
+			phoneNumber: this.state.phoneNumber,
+			accountType:this.state.accountType,
+			initialDep: this.state.initialDep,
 			username: this.state.username,
 			password: this.state.password,
 			confirmPassword: this.state.confirmPassword
@@ -58,7 +67,7 @@ class Signup extends Component {
 						redirectTo: '/login'
 					})
 				} else {
-					console.log('username already taken')
+					console.log('Something went wrong')
 				}
 			}).catch(error => {
 				console.log('signup error: ')
@@ -66,7 +75,6 @@ class Signup extends Component {
 
 			})
 	}
-
 
 render() {
 	if (this.state.redirectTo) {
@@ -137,9 +145,9 @@ render() {
 										type="text"
 										class="form-control"
 										id="address1-input"
-										placeholder="Address 1"
-										name='address1'
-										value={this.state.address1}
+										placeholder="Address"
+										name='address'
+										value={this.state.address}
 										onChange={this.handleChange}
 									/>
 								</div>
@@ -199,7 +207,7 @@ render() {
 										id="phone-input"
 										placeholder="Phone (Numbers Only)"
 										name='phone'
-										value={this.state.phone}
+										value={this.state.phoneNumber}
 										onChange={this.handleChange}
 									/>
 								</div>
@@ -260,7 +268,7 @@ render() {
 										class="form-control"
 										id="confirm-password-input"
 										placeholder="Confirm Password"
-										name='password'
+										name='confirmPassword'
 										value={this.state.confirmpassword}
 										onChange={this.handleChange}
 									/>

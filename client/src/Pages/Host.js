@@ -51,13 +51,12 @@ function Host() {
               <h1>
                 User Data is going here
               </h1>
-               <p>Username: {users.username}</p>
-               <p>ID: {users._id}</p>
-                <p>user.firstName</p>
-                <p>user.LastName</p>
-                <p>user.account</p>
-                <p>user.accountNum1</p>
-                <p>user.accountBalance1</p>
+               <p> <strong>Account Id: </strong> {users._id}</p>
+                <p> <strong>First Name: </strong> {users.firstName}</p>
+                <p> <strong>Last Name: </strong> {users.lastName}</p>
+                <p> <strong>Account Type: </strong> {users.accountType}</p>
+                {/* <p>user.accountNum1</p>
+                <p>user.accountBalance1</p> */}
             </Card>
           </Col>
         </Row>

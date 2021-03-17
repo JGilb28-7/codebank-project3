@@ -7,31 +7,56 @@ const passport = require('../passport')
 router.post('/', (req, res) => {
     console.log('user signup')
 
-    const { username, password } = req.body;
-    
+    const { firstName,
+        lastName,
+        email,
+        age,
+        address1,
+        address2,
+        city,
+        state,
+        zip,
+        phoneNumber,
+        accountType,
+        initialDep,
+        username,
+        password } = req.body;
+
     User.findOne({ username: username }, (err, user) => {
         if (err) {
             console.log('User.js posting error: ', err);
         } else if (user) {
-                res.json({
-                    error: `Sorry, that username already exists with ${username}`
-                })
-            } else {
-                const newUser = new User({
-                    username: username,
-                    password: password
-                })
-                newUser.save((err, savedUser) => {
-                    if(err) return res.json(err)
-                    res.json(savedUser)
-                })
-            }
+            res.json({
+                error: `Sorry, that username already exists with ${username}`
+            })
+        } else {
+            const newUser = new User({
+                firstName: firstName,
+                lastName:lastName,
+                email: email,
+                age: age,
+                address1: address1,
+                address2: address2,
+                city: city,
+                state: state,
+                zip: zip,
+                phoneNumber: phoneNumber,
+                accountType: accountType,
+                initialDep: initialDep,
+                username: username,
+                password: password
+            })
+            newUser.save((err, savedUser) => {
+                if (err) return res.json(err)
+                res.json(savedUser)
+            })
+        }
     })
 })
 
 // For logging-in a user who is already signed-up
 router.post('/login',
-    (req, res, next) => { 
+    (req, res, next) => {
         console.log(req.body)
         next()
     },
@@ -50,16 +75,16 @@ router.post('/login',
 
 
 router.get('/host/:id', (req, res, next) => {
-  
+
     User.findById(req.user._id)
-    .then(function(users) {
-        res.json(users);
-        console.log("ID: " + req.user._id)
-    })
-    .catch(function(err) {
-       
-        console.log("Error:" + err)
-    });
+        .then(function (users) {
+            res.json(users);
+            console.log("ID: " + req.user._id)
+        })
+        .catch(function (err) {
+
+            console.log("Error:" + err)
+        });
 })
 
 
@@ -67,7 +92,7 @@ router.post('/host', (req, res) => {
     if (req.user) {
         res.send({ msg: 'loggging out' })
     } else {
-        res.send({msg: 'no user to logout'})
+        res.send({ msg: 'no user to logout' })
     }
 })
 
@@ -76,17 +101,17 @@ router.post('/logout', (req, res) => {
     if (req.user) {
         res.send({ msg: 'loggging out' })
     } else {
-        res.send({msg: 'no user to logout'})
+        res.send({ msg: 'no user to logout' })
     }
 })
 
 router.get('/', (req, res, next) => {
     console.log('*****user*****')
-    console.log(req.user) ;
+    console.log(req.user);
     if (req.user) {
-        res.json({user: req.user})
+        res.json({ user: req.user })
     } else {
-        res.json({user: null})
+        res.json({ user: null })
     }
 })
 
