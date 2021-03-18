@@ -1,5 +1,6 @@
 const User = require('../database/models/user')
 const LocalStrategy = require('passport-local').Strategy
+const Employee = require('../database/models/employee')
 
 const strategy = new LocalStrategy(
 	{
@@ -11,7 +12,14 @@ const strategy = new LocalStrategy(
 				return done(err)
 			}
 			if (!user) {
-				return done(null, false, { message: 'Incorrect username' })
+				Employee.findOne({ username: username })
+				.then(function (employee) {
+					res.json(employee);
+				})
+				.catch(function (err) {
+		
+					console.log("Error:" + err)
+				});
 			}
 			if (!user.checkPassword(password)) {
 				return done(null, false, { message: 'Incorrect password' })
