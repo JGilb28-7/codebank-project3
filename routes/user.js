@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../database/models/user')
+const Employee = require('../database/models/employee')
 const passport = require('../passport')
 
 // route for signing-up a new user
@@ -54,6 +55,46 @@ router.post('/', (req, res) => {
     })
 })
 
+router.post('/admin/signup', (req, res) => {
+    console.log('employee signup')
+
+    const { firstName,
+        lastName,
+        phoneNumber,
+        email,
+        role,
+        age,
+        gender,
+        username,
+        password } = req.body;
+
+    Employee.findOne({ username: username }, (err, employee) => {
+        if (err) {
+            console.log('Employee.js posting error: ', err);
+        } else if (employee) {
+            res.json({
+                error: `Sorry, that username already exists with ${username}`
+            })
+        } else {
+            const newEmployee = new Employee({
+                firstName: firstName,
+                lastName:lastName,
+                phoneNumber: phoneNumber,
+                email: email,
+                role: role,
+                age: age,
+                gender: gender,
+                username: username,
+                password: password
+            })
+            newEmployee.save((err, savedEmployee) => {
+                if (err) return res.json(err)
+                res.json(savedEmployee)
+            })
+        }
+    })
+})
+
 // For logging-in a user who is already signed-up
 router.post('/login',
     (req, res, next) => {
@@ -67,7 +108,15 @@ router.post('/login',
             username: req.user.username,
             id: req.user._id,
         };
+     
         res.send(userInfo)
+    }
+)
+
+router.post('admin/login',
+    (req, res, next) => {
+        console.log(req.body)
+        next()
     }
 )
 
@@ -94,6 +143,19 @@ router.post('/host', (req, res) => {
     } else {
         res.send({ msg: 'no user to logout' })
     }
+})
+
+router.get('/admin', (req, res, next) => {
+
+    Employee.find(
+        {}
+    )
+        .then(function (employees) {
+            res.json(employees);
+            console.log("Employee" + employees)
+        })
+        .catch(function (err) {
+        });
 })
 
 // route for logging out the user. So this router will handle axios.post('/user/logout') request coming from client

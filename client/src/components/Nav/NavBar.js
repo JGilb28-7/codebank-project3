@@ -22,6 +22,7 @@ class Nav extends React.Component {
             <div className="navbar-nav">
               <a className="nav-link navbar-text-size inline" href="/login">Login</a>
               <a className="nav-link navbar-text-size inline" href="/signup">Sign Up</a>
+              <a className="nav-link navbar-text-size inline" href="admin/login">Admin</a>
             </div>
           </div>
         </div>

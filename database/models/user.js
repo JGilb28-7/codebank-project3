@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String},
   age: { type: Number},
   taxId: { type: Number },
-  role: { type: String},
+  role: { type: String,  default: "user" },
   roleID: { type: Number},
   address1: { type: String},
   address2: { type: String},
@@ -39,6 +39,7 @@ const userSchema = new mongoose.Schema({
     {
       type: Schema.Types.ObjectId,
       ref: "Transaction",
+      default: 0
     },
   ],
 });

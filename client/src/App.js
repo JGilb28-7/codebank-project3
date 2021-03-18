@@ -12,13 +12,16 @@ import { Container, Row, Col } from "./components/Grid";*/
 import Signup from "./components/Signup";
 import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
-import Employee from "./Pages/employees";
+// import Employee from "./Pages/employees";
 import Host from './Pages/Host';
 import Home from './Pages/Home'
 import SignUpForm from "./Pages/Sign-Up-New";
 import About from "./Pages/About";
 import Thanks from "./Pages/Thanks";
 import Logout from "./Pages/Logout";
+import EmployeeSignup from "./components/Employee-signup";
+import Manager from "./Pages/Manager";
+import AdminLogin from "./components/AdminLogin"
 
 class App extends Component {
   constructor() {
@@ -41,6 +44,10 @@ class App extends Component {
     this.setState(userObject);
   }
 
+  updateEmployee(employeeObject) {
+    this.setState(employeeObject);
+  }
+
   getUser() {
     axios.get("/user/").then((response) => {
       console.log("Get user response: ");
@@ -52,6 +59,15 @@ class App extends Component {
           loggedIn: true,
           username: response.data.user.username,
         });
+      }
+       else if (response.data.employee) {
+          console.log("Get User: There is a user saved in the server session: ");
+  
+          this.setState({
+            loggedIn: true,
+            username: response.data.employee.username,
+          });
+
       } else {
         console.log("Get user: no user");
         this.setState({
@@ -69,7 +85,7 @@ class App extends Component {
           <Switch>
             <Route
               path="/login"
-              render={() => <LoginForm updateUser={this.updateUser} />}
+              render={() => <LoginForm updateUser={this.updateUser} updateEmployee={this.updateEmployee} />}
             />  
             
             <Route exact path="/">
@@ -81,9 +97,12 @@ class App extends Component {
             <Route path="/thanks" render={() => <Thanks />} />
             <Route path="/logout" render={() => <Logout />} />
             <Route path="/signup-new" render={() => <SignUpForm />} />
-            <Route path="/employee" render={() => <Employee />} />
+            {/* <Route path="/employee" render={() => <Employee />} /> */}
             <Route path="/signup" render={() => <Signup />} />
+            <Route path="/admin/signup" render={() => <EmployeeSignup />} />
             <Route path="/Host" render={() => <Host />} />
+            <Route path="/admin/login/home" render={() => <Manager />} />
+            <Route path="/admin/login" render={() => <AdminLogin />} />
 
           </Switch>
         </BrowserRouter>
