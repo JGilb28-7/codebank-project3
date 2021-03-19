@@ -12,7 +12,9 @@ import Nav from '../components/LogoutNav/index'
 //import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import Footer from "../components/Footer";
+import TransModal from "../components/TransModal/TransModal";
 //import Signup from "../components/Signup"
+
 
 
 function Host() {
@@ -63,14 +65,7 @@ function Host() {
         <Row>
           <Col size="md-12">
             <Card>
-              <h1>
-                Transations here
-              </h1>
-                <Button> Make a Transfer</Button>
-                
-                <Button > Make a deposit</Button>
-
-                <Button> Make a withdrawal</Button>
+                <TransModal/>    
             </Card>
           </Col>
         </Row>
