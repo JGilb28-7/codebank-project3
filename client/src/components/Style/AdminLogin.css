@@ -1,0 +1,22 @@
+* {
+    font-family: "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    color: dimgray;
+  }
+
+  .login {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .width {
+    width: 350px;
+  }
+
+  .form-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .signUpPrompt {
+    margin-top: 15px;
+  }

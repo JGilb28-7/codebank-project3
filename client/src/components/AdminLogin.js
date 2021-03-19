@@ -5,6 +5,8 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Nav from './Nav/NavBar'
 import Footer from './Footer'
+import './Style/AdminLogin.css'
+import AdminNav from './AdminNav/AdminNav'
 
 class AdminLogin extends Component {
     constructor() {
@@ -62,14 +64,14 @@ class AdminLogin extends Component {
 
                 <div>
 
-                    <Nav />
+                    <AdminNav/>
 
                     <div class="container">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
                                 <div class="width">
                                     <h1 class="login">
-                                        Log in
+                                    Admin Log in
                                     </h1>
                                     <form id="login">  
                                         <div class="form-group">
@@ -96,7 +98,7 @@ class AdminLogin extends Component {
                                             onClick={this.handleSubmit}
                                             type="submit">Login
                                         </button>
-                                        <p class="signUpPrompt">Or sign up <a href="admin/signup">here</a>.</p>
+                                        <p class="signUpPrompt">Or sign up <a href="/admin/signup">here</a>.</p>
                                     </form>
                                 </div>
                             </div>

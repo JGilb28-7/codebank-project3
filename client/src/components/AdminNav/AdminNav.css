@@ -1,0 +1,14 @@
+.navbar-text-size {
+    font-size: 22px;
+  }
+  
+  .logo {
+    color: cornflowerblue;
+    font-family: "Fredoka One", cursive;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .admin-margin {
+      margin-top: 16px;
+  }
