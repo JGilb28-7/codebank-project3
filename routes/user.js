@@ -2,7 +2,8 @@ const express = require('express')
 const router = express.Router()
 const User = require('../database/models/user')
 const Employee = require('../database/models/employee')
-const passport = require('../passport')
+const passport = require('../passport');
+const Transaction = require('../database/models/Transaction')
 
 // route for signing-up a new user
 router.post('/', (req, res) => {
@@ -157,6 +158,40 @@ router.get('/admin', (req, res, next) => {
         .catch(function (err) {
         });
 })
+
+router.post('/test',
+    (req, res) => {
+           User.findById("6051822ef5aade6a18c1f3df")
+        //    .populate("transactions")
+           .then(function (test) {
+               res.json(test)
+           })
+    }
+)
+
+router.post("/transactions", ({body}, res) => {
+    Transaction.create({name: body.name, value: body.value})
+      .then(({ _id }) => User.findOneAndUpdate({_id: body._id}, { $push: { transactions: _id } }, { new: true }))
+      .then(dbUser => {
+        res.json(dbUser);
+      })
+      .catch(err => {
+        res.json(err);
+      });
+  });
+  
+  router.get('/transactions/:id', ({body}, res) => {
+    Transaction.findById({_id: body._id}) //
+        .then(function (trans) {
+            res.json(trans);
+            console.log("transactions" + trans)
+        })
+        .catch(function (err) {
+
+            console.log("Error:" + err)
+        });
+})
+
 
 // route for logging out the user. So this router will handle axios.post('/user/logout') request coming from client
 router.post('/logout', (req, res) => {
