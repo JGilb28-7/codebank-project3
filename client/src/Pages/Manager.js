@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import Nav from '../components/LogoutNav/index'
 import Footer from "../components/Footer";
  import { List, ListItem } from "../components/List";
+import AdminNav from "../components/AdminNav/AdminNav";
 
 function Manager() {
   const [employees, setEmployees] = useState(
@@ -32,8 +33,7 @@ function Manager() {
   }
   return (
       <Container fluid>
-        <Nav>
-        </Nav>
+        <AdminNav link1='/admin/signup' text1='Employee Sign Up' link2='/logout' text2='Log Out'/>
         <Row>
           <Col size="md-12">
             <Card>

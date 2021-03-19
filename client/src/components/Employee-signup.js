@@ -4,7 +4,8 @@ import axios from 'axios'
 import './Sign-Up-New/Sign-Up-New.css'
 import Nav from './Nav/NavBar'
 import Footer from './Footer'
-
+import './Style/Employee-signup.css'
+import AdminNav from './AdminNav/AdminNav'
 
 class EmployeeSignup extends Component {
 	constructor() {
@@ -73,7 +74,7 @@ render() {
 			return (
 				
 				<div>
-					<Nav />
+					<AdminNav/>
 
 					<div class="container">
                			<div class="row">
