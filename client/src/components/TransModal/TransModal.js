@@ -1,6 +1,7 @@
 import React from 'react';
 import BlockButton from '../BlockButton/BlockButton';
-import Button from '../Button'
+import Button from '../Button';
+import axios from 'axios'
 
 class TransModal extends React.Component {
     constructor(props) {
@@ -8,6 +9,9 @@ class TransModal extends React.Component {
         this.state = {
           transTypes: '',
           transAmount: '',
+          _id: '',
+          name: '',
+          value: 0
         };
       }  
     
@@ -17,6 +21,22 @@ class TransModal extends React.Component {
         this.setState({[nam]: val});
     }
 
+    
+	// handleSubmit(event) {
+	// 	event.preventDefault()
+
+	// 	//request to server to add a new username/password
+	// 	axios.get(`/user/transactions/${_id}`, {
+          
+	// 	})
+	// 		.then(response => {
+	// 			console.log(response)
+	// 		}).catch(error => {
+	// 			console.log(error)
+
+	// 		})
+	// }
+
     render (){
         return (
         <div>
@@ -25,10 +45,11 @@ class TransModal extends React.Component {
             </h1>
               
             <button
-            type="button"
+            type="submit"
             class="btn blue-btn"
             data-mdb-toggle="modal"
             data-mdb-target="#exampleModal"
+            onClick={this.handleSubmit}
             >
             Start a transaction
             </button>
