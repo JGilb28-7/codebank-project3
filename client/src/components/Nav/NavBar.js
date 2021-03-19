@@ -1,5 +1,4 @@
 import React from 'react';
-
 class Nav extends React.Component {
   render() {
     return (
@@ -21,8 +20,10 @@ class Nav extends React.Component {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <a className="nav-link navbar-text-size inline" href="/login">Login</a>
-              <a className="nav-link navbar-text-size inline" href="/signup">Sign Up</a>
-              <a className="nav-link navbar-text-size inline" href="admin/login">Admin</a>
+              <a className="nav-link navbar-text-size inline" href="/signup">Sign Up</a>  
+            </div>
+            <div className='navbar-nav ml-auto'>
+              <a className="nav-link navbar-text-size inline ml-auto" href="admin/login">Admin</a>
             </div>
           </div>
         </div>
