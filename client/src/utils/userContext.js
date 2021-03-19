@@ -5,7 +5,15 @@ const UserContext = React.createContext({
   username: "",
   firstName: "",
   lastName: "",
-  accountType: ""
+  accountType: "",
+  initialDep:"",
+  email: "",
+  accountBalance1:"",
+  accountNum1:""
+
+
+
+  
 });
 
 export default UserContext;
