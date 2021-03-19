@@ -16,12 +16,13 @@ import { BrowserRouter } from "react-router-dom";
 import Host from './Pages/Host';
 import Home from './Pages/Home'
 import SignUpForm from "./Pages/Sign-Up-New";
-import About from "./Pages/About";
+import About from './Pages/About'
 import Thanks from "./Pages/Thanks";
 import Logout from "./Pages/Logout";
 import EmployeeSignup from "./components/Employee-signup";
 import Manager from "./Pages/Manager";
 import AdminLogin from "./components/AdminLogin"
+import Team from "./Pages/Team";
 
 class App extends Component {
   constructor() {
@@ -92,8 +93,9 @@ class App extends Component {
                 <Redirect to="/home" />
             </Route>
 
-            <Route path="/home" render={() => <Home />} />
             <Route path="/about" render={() => <About />} />
+            <Route path="/home" render={() => <Home />} />
+            <Route path="/team" render={() => <Team />} />
             <Route path="/thanks" render={() => <Thanks />} />
             <Route path="/logout" render={() => <Logout />} />
             <Route path="/signup-new" render={() => <SignUpForm />} />

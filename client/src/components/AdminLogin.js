@@ -98,7 +98,7 @@ class AdminLogin extends Component {
                                             onClick={this.handleSubmit}
                                             type="submit">Login
                                         </button>
-                                        <p class="signUpPrompt">Or sign up <a href="admin/signup">here</a>.</p>
+                                        <p class="signUpPrompt">Or sign up <a href="/admin/signup">here</a>.</p>
                                     </form>
                                 </div>
                             </div>

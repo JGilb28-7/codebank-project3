@@ -38,22 +38,55 @@ function Manager() {
           <Col size="md-12">
             <Card>
               <h2>
-                Employees data
+                Employee data
               </h2>
-           
-              <List>
-              {employees.map((employees) => {
-                return (
-                      <strong>
-                        First Name: {employees.firstName}
-                      </strong>
-                  
-                
-                );
-              })}
-            </List>
 
+              <div>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">-</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Username</th>
+                  </tr>
+                </thead>
+            
+                <tbody>
+                  {employees.map((employees) => {
+                    return (
+                      <tr>
+                      <th scope="row">-</th>
+                      <td>{employees.firstName}</td>
+                      <td>{employees.lastName}</td>
+                      <td>{employees.phoneNumber}</td>
+                      <td>{employees.email}</td>
+                      <td>{employees.role}</td>
+                      <td>{employees.age}</td>
+                      <td>{employees.gender}</td>
+                      <td>{employees.username}</td>
+                    </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+              </div>
               
+              {/*<List>
+                {employees.map((employees) => {
+                  return (
+                        <strong>
+                          First Name: {employees.firstName}
+                        </strong>
+                  );
+                })}
+              </List>*/}
+  
             </Card>
           </Col>
         </Row>
