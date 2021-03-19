@@ -11,9 +11,6 @@ const UserContext = React.createContext({
   accountBalance1:"",
   accountNum1:""
 
-
-
-  
 });
 
 export default UserContext;

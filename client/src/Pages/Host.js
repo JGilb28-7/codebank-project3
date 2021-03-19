@@ -2,7 +2,7 @@
 //import { Redirect } from 'react-router-dom'
 //import axios from 'axios'
 import React, { useState, useEffect, useContext } from "react";
-import NumberFormat from 'react-number-format';
+//import NumberFormat from 'react-number-format';
 import UserContext from '../utils/userContext'
 //import { useParams } from "react-router-dom";
 import Card from "../components/Card";
@@ -60,10 +60,8 @@ function Host() {
                
                 <p> <strong>Intial Deposit:</strong> {users.initialDep} </p> 
                 
-                <p> <strong>Current Balance: </strong>
-                </p>
+                <p> <strong>Current Balance: </strong></p>
     
-                <p></p>,
             </Card>
           </Col>
         </Row>
