@@ -6,6 +6,7 @@ import Nav from './Nav/NavBar'
 import Footer from './Footer'
 
 
+
 class Signup extends Component {
 	constructor() {
 		super()

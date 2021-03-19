@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Nav from './Nav/NavBar'
 import Footer from './Footer'
+const localStrategy = require('passport-local').Strategy
 
 class LoginForm extends Component {
     constructor() {

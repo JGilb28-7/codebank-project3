@@ -2,6 +2,7 @@
 //import { Redirect } from 'react-router-dom'
 //import axios from 'axios'
 import React, { useState, useEffect, useContext } from "react";
+import NumberFormat from 'react-number-format';
 import UserContext from '../utils/userContext'
 //import { useParams } from "react-router-dom";
 import Card from "../components/Card";
@@ -19,6 +20,7 @@ import TransModal from "../components/TransModal/TransModal";
 
 function Host() {
   const user = useContext(UserContext);
+  
   const [users, setUsers] = useState(
     {
       _id: ""
@@ -51,14 +53,17 @@ function Host() {
           <Col size="md-12">
             <Card>
               <h1>
-                User Data is going here
+              Welcome {users.firstName} to JJWA Online Banking
               </h1>
-               <p> <strong>Account Id: </strong> {users._id}</p>
-                <p> <strong>First Name: </strong> {users.firstName}</p>
-                <p> <strong>Last Name: </strong> {users.lastName}</p>
-                <p> <strong>Account Type: </strong> {users.accountType}</p>
-                {/* <p>user.accountNum1</p>
-                <p>user.accountBalance1</p> */}
+
+                <p> <strong>Account Type: </strong> {users.accountType} </p>
+               
+                <p> <strong>Intial Deposit:</strong> {users.initialDep} </p> 
+                
+                <p> <strong>Current Balance: </strong>
+                </p>
+    
+                <p></p>,
             </Card>
           </Col>
         </Row>
