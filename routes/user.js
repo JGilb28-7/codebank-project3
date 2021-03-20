@@ -114,7 +114,7 @@ router.post('/login',
     }
 )
 
-router.post('admin/login',
+router.post('/admin/login',
     (req, res, next) => {
         console.log(req.body)
         next()
@@ -159,6 +159,15 @@ router.get('/admin', (req, res, next) => {
         });
 })
 
+router.get('/admin/:id' ,(req, res) => {
+    Employee
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+      console.log("ID" + req.params.id)
+  })
+
 router.post('/test',
     (req, res) => {
            User.findById("6051822ef5aade6a18c1f3df")
@@ -200,6 +209,11 @@ router.post('/logout', (req, res) => {
     } else {
         res.send({ msg: 'no user to logout' })
     }
+})
+
+router.get('/admin/signup', (req, res, next) => {
+    console.log(req.body);
+   
 })
 
 router.get('/', (req, res, next) => {

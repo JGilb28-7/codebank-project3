@@ -17,7 +17,6 @@ function Manager() {
        fetchEmployees();
    }, [])
  
-
    function fetchEmployees() {
     fetch(`/user/admin/`, {
       method: "GET",
