@@ -10,7 +10,7 @@ https://jjwa-bank.herokuapp.com/home
 
 ## Home Page Preview
 
-![][https://raw.githubusercontent.com/JGilb28-7/codebank-project3/master/client/src/assets/homePage.PNG]
+![](https://raw.githubusercontent.com/JGilb28-7/codebank-project3/master/client/src/assets/homePage.PNG)
 ## Authors
 
 James Coughlin: https://github.com/mrjacoughlin
