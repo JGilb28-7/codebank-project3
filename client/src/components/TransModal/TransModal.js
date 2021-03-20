@@ -1,43 +1,34 @@
-import React from 'react';
 import BlockButton from '../BlockButton/BlockButton';
-import Button from '../Button';
-import axios from 'axios'
+import React, { useState, useEffect, useContext} from "react";
+import TransContext from '../../utils/TransContext'
+function TransModal() {
+//   const transaction = useContext(TransContext);
+//   const [transactions, setTransactions] = useState(
+//    []
+//   )
 
-class TransModal extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          transTypes: '',
-          transAmount: '',
-          _id: '',
-          name: '',
-          value: 0
-        };
-      }  
-    
-      changeHandler = (event) => {
-        let nam = event.target.name;
-        let val = event.target.value;
-        this.setState({[nam]: val});
-    }
+  useEffect(() => {
+    //    fetchTransactions();
+   }, [])
 
     
 	// handleSubmit(event) {
 	// 	event.preventDefault()
 
-	// 	//request to server to add a new username/password
-	// 	axios.get(`/user/transactions/${_id}`, {
-          
-	// 	})
-	// 		.then(response => {
-	// 			console.log(response)
-	// 		}).catch(error => {
-	// 			console.log(error)
-
-	// 		})
-	// }
-
-    render (){
+    // const _id = transactions
+//     function fetchTransactions() {
+//      fetch(`/user/transaction`, {
+//        method: "GET",
+//        headers: {
+//          Accept: "application/json",
+//          "Content-Type": "application/json"
+//        },
+//      })
+//        .then((res) => res.json())
+//        .then((transData) => {
+//          setTransactions( transData);
+//        });
+//    }
         return (
         <div>
             <h1>
@@ -49,9 +40,10 @@ class TransModal extends React.Component {
             class="btn blue-btn"
             data-mdb-toggle="modal"
             data-mdb-target="#exampleModal"
-            onClick={this.handleSubmit}
+            // onClick={this.handleSubmit}
             >
             Start a transaction
+           
             </button>
 
             <div
@@ -65,6 +57,15 @@ class TransModal extends React.Component {
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="cntr-txt" id="exampleModalLabel">Transactions</h5>
+
+                     {/* <p>   {transactions.map((transactions) => {
+                              return (
+                                <strong>
+                                      {transactions.name}  
+                                </strong>
+                                  );
+                         })}
+                         </p> */}
                             <button
                             type="button"
                             class="btn-close"
@@ -82,8 +83,9 @@ class TransModal extends React.Component {
                                                 class="custom-select" 
                                                 id='transactionTypes'
                                                 name='transTypes'
-                                                value={this.state.transTypes}
-                                                onChange={this.changeHandler}>
+                                                // value={this.state.transTypes}
+                                                // onChange={this.changeHandler}
+                                                >
                                                 <option selected>Transaction Type:</option>
                                                 <option value="deposit">Deposit</option>
                                                 <option value="send-money">Send Money</option>
@@ -95,8 +97,8 @@ class TransModal extends React.Component {
                                                 id="trans-amount"
                                                 placeholder="Amount"
                                                 name='transAmount'
-                                                value={this.state.transAmount}
-                                                onChange={this.changeHandler}
+                                                // value={this.state.transAmount}
+                                                // onChange={this.changeHandler}
                                                 />           
                                             </div> 
                                             <BlockButton>Deposit</BlockButton>
@@ -119,6 +121,5 @@ class TransModal extends React.Component {
         </div>
         )
     }
-}
 
 export default TransModal;
