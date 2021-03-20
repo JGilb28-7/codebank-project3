@@ -58,7 +58,7 @@ function Statement() {
       </Navbar.Brand>
 </Navbar>
 <br/>
-        <Container>
+        <container>
           <div class="row">
           <div class="userInfo col-md-4">
           <p> Joy N Banking </p>
@@ -127,7 +127,7 @@ function Statement() {
         </tr>
       </tbody>
     </Table>
-    </Container>
+    </container>
     </>
         )
 }

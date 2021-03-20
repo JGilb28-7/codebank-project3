@@ -22,12 +22,19 @@ function About () {
                     <div class='col-md-6 animate__animated animate__slideInDown'>
                        <h1 class='welcome'>Welcome!</h1>
                        <p class='about'>
-                            <span><a href='team'>JJWA </a></span>was started by amazing, brillant, and wicked smart 
-                            financial pros and full stack developers. <br></br><br></br>
+                            <span><a href='team'>JJWA </a></span>
+                        
+                           Was started by a group of amazingly brillant, 
+                            and wicked smart financial pros and future full stack developers. 
+                            <br></br><br></br>
              
                             Our goal is to provide customers with the simpilest way to 
+
                             bank, save $$$, and transact in a way that makes 
                             life easier for everyone!
+                            <br></br><br></br>
+
+                            This is where banking is joyful!
                         </p> 
                     </div>
                 </div>
