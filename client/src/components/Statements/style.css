@@ -1,0 +1,34 @@
+.center-navbar {
+    width:30%;
+  }
+  .color {
+      background-color: #6495ED;
+  }
+  .userInfo {
+        line-height: 18px;
+        font-size: 15px;
+        text-align: left;
+   
+  }
+  .right {
+    line-height: 18px;
+    font-size: 15px;
+    text-align: right;
+
+}
+  .header {
+
+    color: #6495ED;
+  }
+  .logo {
+    color: cornflowerblue;
+    font-family: "Fredoka One", cursive;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .btn-close {
+    position: absolute;
+     right: 0;
+  
+
+  }

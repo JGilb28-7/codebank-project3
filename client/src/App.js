@@ -33,12 +33,15 @@ class App extends Component {
     };
 
     this.getUser = this.getUser.bind(this);
+    this.getEmployee = this.getEmployee.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateUser = this.updateUser.bind(this);
+    this.updateEmployee = this.updateEmployee.bind(this);
   }
 
   componentDidMount() {
     this.getUser();
+    this.getEmployee();
   }
 
   updateUser(userObject) {
@@ -61,15 +64,7 @@ class App extends Component {
           username: response.data.user.username,
         });
       }
-       else if (response.data.employee) {
-          console.log("Get User: There is a user saved in the server session: ");
-  
-          this.setState({
-            loggedIn: true,
-            username: response.data.employee.username,
-          });
-
-      } else {
+      else {
         console.log("Get user: no user");
         this.setState({
           loggedIn: false,
@@ -77,6 +72,13 @@ class App extends Component {
         });
       }
     });
+  }
+
+  
+  getEmployee() {
+    axios.get("/user/admin/signup/").then((response) => {
+      console.log(response.data);
+      })
   }
 
   render() {
@@ -103,7 +105,7 @@ class App extends Component {
             <Route path="/signup" render={() => <Signup />} />
             <Route path="/admin/signup" render={() => <EmployeeSignup />} />
             <Route path="/Host" render={() => <Host />} />
-            <Route path="/admin/login/home" render={() => <Manager />} />
+            <Route path="/admin/home" render={() => <Manager />} />
             <Route path="/admin/login" render={() => <AdminLogin />} />
 
           </Switch>

@@ -31,7 +31,7 @@ class AdminLogin extends Component {
         event.preventDefault()
 
         axios
-            .post('/admin/login', {
+            .post('/user/admin/login', {
                 username: this.state.username,
                 password: this.state.password
             })

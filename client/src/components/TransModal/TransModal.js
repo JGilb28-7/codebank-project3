@@ -1,11 +1,32 @@
 import BlockButton from '../BlockButton/BlockButton';
 import React, { useState, useEffect, useContext} from "react";
 import TransContext from '../../utils/TransContext'
+import { Input, TextArea, FormBtn } from "../../components/Form";
 function TransModal() {
-//   const transaction = useContext(TransContext);
-//   const [transactions, setTransactions] = useState(
-//    []
-//   )
+    const [deposit, setdeposit] = useState({
+        amount: 10000,
+        value: 0
+      });
+    
+    
+      const [formObject, setFormObject] = useState({})
+    
+      function handleInputChange(event) {
+        const { name, value, } = event.target;
+        setFormObject({...formObject, [name]: value,})
+        console.log("user input" +event.target.value)
+        
+      }
+    
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        if (formObject.deposit) {
+            setdeposit({ ...deposit, amount: deposit.amount + 2000})
+        }
+        if (formObject.withdraw) {
+            setdeposit({ ...deposit, amount: deposit.amount - 2000 })
+        }
+      };
 
   useEffect(() => {
     //    fetchTransactions();
@@ -79,36 +100,37 @@ function TransModal() {
                                     <div class='col-md-6'>
                                         <form>
                                             <div class="form-group form-margin">
-                                            <select 
-                                                class="custom-select" 
-                                                id='transactionTypes'
-                                                name='transTypes'
-                                                // value={this.state.transTypes}
-                                                // onChange={this.changeHandler}
-                                                >
-                                                <option selected>Transaction Type:</option>
-                                                <option value="deposit">Deposit</option>
-                                                <option value="send-money">Send Money</option>
-                                            </select>
+                                           
                                             <div class="form-group form-margin">
                                                 <input
                                                 type="text"
                                                 class="form-control"
                                                 id="trans-amount"
-                                                placeholder="Amount"
-                                                name='transAmount'
-                                                // value={this.state.transAmount}
-                                                // onChange={this.changeHandler}
-                                                />           
+                                                placeholder="Deposit"
+                                                onChange={handleInputChange}
+                                                name="deposit"
+                                                />  
+                                                <br/>
+                                                   <input
+                                                type="text"
+                                                class="form-control"
+                                                id="trans-amount"
+                                                placeholder="Withdrawal"
+                                                onChange={handleInputChange}
+                                                name="withdraw"
+                                                />  
+          
                                             </div> 
-                                            <BlockButton>Deposit</BlockButton>
-                                            <BlockButton>Send Money</BlockButton>
+                                            <button className= "btn blue-btn btn-block btn-margin"
+                                            onClick={handleFormSubmit}>
+                                                      Submit
+                                                      </button>
                                             </div>
                                         </form> 
                                     </div>
                                     <div class='col-md-6 d-flex align-items-center'>
                                         <div class='modal-bal'>
-                                            <h2>Current Balance:</h2>
+                                            <h4><strong>Current Balance:</strong> ${deposit.amount}</h4>
                                             <p id='modal-bal'></p>
                                         </div>
                                     </div>
