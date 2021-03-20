@@ -9,7 +9,10 @@ const UserContext = React.createContext({
   initialDep:"",
   email: "",
   accountBalance1:"",
-  accountNum1:""
+  accountNum1:"",
+  phoneNumber:"",
+
+
 
 });
 

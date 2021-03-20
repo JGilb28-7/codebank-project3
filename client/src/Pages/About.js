@@ -26,7 +26,7 @@ function About () {
                             financial pros and full stack developers. <br></br><br></br>
              
                             Our goal is to provide customers with the simpilest way to 
-                            bank, save thier $$$ and transact in a way that makes 
+                            bank, save $$$, and transact in a way that makes 
                             life easier for everyone!
                         </p> 
                     </div>

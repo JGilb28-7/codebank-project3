@@ -61,7 +61,7 @@ function Statement() {
         <Container>
           <div class="row">
           <div class="userInfo col-md-4">
-          <p> Sara M Roy </p>
+          <p> Joy N Banking </p>
          <p> Main street
           Westbrook, ME 04092 </p>
           </div>
