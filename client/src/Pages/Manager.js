@@ -47,12 +47,11 @@ function Manager() {
                     <th scope="col">-</th>
                     <th scope="col">First</th>
                     <th scope="col">Last</th>
-                    <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
                     <th scope="col">Age</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Username</th>
+                    
+                    
                   </tr>
                 </thead>
             
@@ -63,11 +62,9 @@ function Manager() {
                       <th scope="row">-</th>
                       <td>{employees.firstName}</td>
                       <td>{employees.lastName}</td>
-                      <td>{employees.phoneNumber}</td>
                       <td>{employees.email}</td>
                       <td>{employees.role}</td>
                       <td>{employees.age}</td>
-                      <td>{employees.gender}</td>
                       <td>{employees.username}</td>
                     </tr>
                     );

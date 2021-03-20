@@ -4,6 +4,7 @@ import axios from 'axios'
 import './Sign-Up-New/Sign-Up-New.css'
 import Nav from './Nav/NavBar'
 import Footer from './Footer'
+const localStrategy = require('passport-local').Strategy
 
 
 

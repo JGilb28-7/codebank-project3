@@ -53,11 +53,9 @@ function Host() {
           <Col size="md-12">
             <Card>
               <h1>
-                User Data is going here
+                Welcome {users.firstName} {users.lastName} to JJWA Bank!
               </h1>
                <p> <strong>Account Id: </strong> {users._id}</p>
-                <p> <strong>First Name: </strong> {users.firstName}</p>
-                <p> <strong>Last Name: </strong> {users.lastName}</p>
                 <p> <strong>Account Type: </strong> {users.accountType}</p>
                 {/* <p>user.accountNum1</p>
                 <p>user.accountBalance1</p> */}

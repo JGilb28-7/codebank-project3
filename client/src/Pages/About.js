@@ -24,18 +24,17 @@ function About () {
                        <p class='about'>
                             <span><a href='team'>JJWA </a></span>
                         
-                            <span><a>Was started by a group of amazingly brillant, 
+                           Was started by a group of amazingly brillant, 
                             and wicked smart financial pros and future full stack developers. 
                             <br></br><br></br>
              
                             Our goal is to provide customers with the simpilest way to 
-                            bank, to save thier $$$ and transact in a way that makes 
-                            life easier. 
+
+                            bank, save $$$, and transact in a way that makes 
+                            life easier for everyone!
                             <br></br><br></br>
 
-                           This is where banking is joyful!
-                            </a>
-                            </span>
+                            This is where banking is joyful!
                         </p> 
                     </div>
                 </div>

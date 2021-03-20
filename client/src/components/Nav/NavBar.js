@@ -25,7 +25,7 @@ class Nav extends React.Component {
               <a className="nav-link navbar-text-size inline" href="/signup">Sign Up</a>  
             </div>
             <div className='navbar-nav ml-auto'>
-              <a className="nav-link navbar-text-size inline" href="admin/login">Admin</a>
+              <a className="nav-link navbar-text-size inline" href="/admin/home">Admin</a>
             </div>
           </div>
         </div>
