@@ -1,0 +1,16 @@
+.welcome {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.about {
+    font-size: 30px;
+    text-align: justify;
+    margin-bottom: 70px;
+}
+
+.padding-btm {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
