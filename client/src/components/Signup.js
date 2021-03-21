@@ -4,9 +4,6 @@ import axios from 'axios'
 import './Sign-Up-New/Sign-Up-New.css'
 import Nav from './Nav/NavBar'
 import Footer from './Footer'
-const localStrategy = require('passport-local').Strategy
-
-
 
 class Signup extends Component {
 	constructor() {
@@ -39,8 +36,6 @@ class Signup extends Component {
 	}
 
 	handleSubmit(event) {
-		console.log('sign-up handleSubmit, username: ')
-		console.log(this.state.username)
 		event.preventDefault()
 
 		//request to server to add a new username/password
@@ -62,7 +57,6 @@ class Signup extends Component {
 			confirmPassword: this.state.confirmPassword
 		})
 			.then(response => {
-				console.log(response)
 				if (!response.data.errmsg && (this.state.password === this.state.confirmPassword)) {
 					console.log('successful signup')
 					this.setState({ //redirect to login page
@@ -87,17 +81,16 @@ render() {
 				<div>
 					<Nav />
 
-					<div class="container">
-               			<div class="row">
-                     		<div class="col-md-7 col-md-offset-3">
-                        		<h1 class="choosing-to-bank">Thanks for choosing to bank with us!</h1>
-                         		<p class="details-font-size">We'll just need a few more details:</p>
+					<div className="container">
+               			<div className="row">
+                     		<div className="col-md-7 col-md-offset-3">
+                        		<h1 className="choosing-to-bank">Thanks for choosing to bank with us!</h1>
+                         		<p className="details-font-size">We'll just need a few more details:</p>
                         
-								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="firstName"
 										placeholder="First Name"
 										name='firstName'
@@ -106,10 +99,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="lastName"
 										placeholder="Last Name"
 										name='lastName'
@@ -118,10 +111,10 @@ render() {
 									/>
 								</div>
 								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="email"
 										placeholder="Email"
 										name='email'
@@ -130,10 +123,10 @@ render() {
 									/>
 								</div>
 								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="age"
 										placeholder="Age"
 										name='age'
@@ -142,10 +135,10 @@ render() {
 									/>
 								</div>
 								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="address1-input"
 										placeholder="Address"
 										name='address'
@@ -154,10 +147,10 @@ render() {
 									/>
 								</div>
 								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="address2-input"
 										placeholder="Address 2"
 										name='address2'
@@ -166,10 +159,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="city-input"
 										placeholder="City"
 										name='city'
@@ -178,10 +171,10 @@ render() {
 									/>
 								</div>
 								 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="state-input"
 										placeholder="State"
 										name='state'
@@ -190,10 +183,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="zip-input"
 										placeholder="Zip Code"
 										name='zip'
@@ -202,10 +195,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="phone-input"
 										placeholder="Phone (Numbers Only)"
 										name='phone'
@@ -214,9 +207,9 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<select 
-										class="custom-select" 
+										className="custom-select" 
 										id='accountType-input'
 										name='accountType'
 										value={this.state.accountType}
@@ -228,10 +221,10 @@ render() {
 									</select>
 								 </div>
 
-								 <div class="form-group form-margin">
+								 <div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="initialDep-input"
 										placeholder="Initial Deposit Amount"
 										name='initialDep'
@@ -240,10 +233,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="username-input"
 										placeholder="Username"
 										name='username'
@@ -252,10 +245,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="password"
-										class="form-control"
+										className="form-control"
 										id="password-input"
 										placeholder="Password"
 										name='password'
@@ -264,10 +257,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="password"
-										class="form-control"
+										className="form-control"
 										id="confirm-password-input"
 										placeholder="Confirm Password"
 										name='confirmPassword'

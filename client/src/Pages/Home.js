@@ -10,17 +10,17 @@ function Home () {
     <div>
          <Nav />
 
-         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <p class="heading slide-right">Welcome to easy to use online banking!</p>
+         <div className="container">
+            <div className="row">
+                <div className="col-md-6 text-center">
+                    <p className="heading slide-right">Welcome to easy to use online banking!</p>
                 
                     <BlueButton text='Sign Up!' link='signup' />
                 </div>
 
-                <div class="col-md-6">
+                <div className="col-md-6">
                     <img 
-                        class="img-fluid img-margin" 
+                        className="img-fluid img-margin" 
                         src={HomePic} 
                         alt="bank-collage"
                     />

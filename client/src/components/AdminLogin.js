@@ -1,9 +1,6 @@
-// It contains a login form. On clicking submit, it makes an axios post request with the username and password:
-
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-import Nav from './Nav/NavBar'
 import Footer from './Footer'
 import './Style/AdminLogin.css'
 import AdminNav from './AdminNav/AdminNav'
@@ -36,8 +33,6 @@ class AdminLogin extends Component {
                 password: this.state.password
             })
             .then(response => {
-                console.log('login response: ')
-                console.log(response)
                 if (response.status === 200) {
                     // update App.js state
                     this.props.updateUser({
@@ -66,16 +61,16 @@ class AdminLogin extends Component {
 
                     <AdminNav/>
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col d-flex justify-content-center">
-                                <div class="width">
-                                    <h1 class="login">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col d-flex justify-content-center">
+                                <div className="width">
+                                    <h1 className="login">
                                     Admin Log in
                                     </h1>
                                     <form id="login">  
-                                        <div class="form-group">
-                                            <input class="form-control form-margin"
+                                        <div className="form-group">
+                                            <input className="form-control form-margin"
                                                 type="text"
                                                 id="username"
                                                 name="username"
@@ -84,8 +79,8 @@ class AdminLogin extends Component {
                                                 onChange={this.handleChange}
                                             />
                                         </div>
-                                        <div class="form-group">
-                                            <input class="form-control form-margin"
+                                        <div className="form-group">
+                                            <input className="form-control form-margin"
                                                 placeholder="Password"
                                                 type="password"
                                                 name="password"
@@ -94,11 +89,11 @@ class AdminLogin extends Component {
                                             />
                                         </div>
                                         <button
-                                            class="btn blue-btn btn-block"
+                                            className="btn blue-btn btn-block"
                                             onClick={this.handleSubmit}
                                             type="submit">Login
                                         </button>
-                                        <p class="signUpPrompt">Or sign up <a href="/admin/signup">here</a>.</p>
+                                        <p className="signUpPrompt">Or sign up <a href="/admin/signup">here</a>.</p>
                                     </form>
                                 </div>
                             </div>

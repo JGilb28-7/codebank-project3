@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext} from "react";
+import React, { useState} from "react";
 import Table from "react-bootstrap/Table";
-import Container from "react-bootstrap/Container";
 import Navbar  from "react-bootstrap/Navbar";
 import "./style.css";
 
@@ -59,13 +58,13 @@ function Statement() {
 </Navbar>
 <br/>
         <container>
-          <div class="row">
-          <div class="userInfo col-md-4">
+          <div className="row">
+          <div className="userInfo col-md-4">
           <p> Joy N Banking </p>
          <p> Main street
           Westbrook, ME 04092 </p>
           </div>
-          <div class="right col-md-5">
+          <div className="right col-md-5">
           <strong>Account Type: </strong>
           <strong>Account Number: </strong>
           <strong>Balance:</strong>
@@ -73,7 +72,7 @@ function Statement() {
           <br/>
           <p>Statement Period:</p>
           </div>
-          <div class="right col-md-3" >
+          <div className="right col-md-3" >
          <p> Checking
            0029867542
          ${statement.balance}</p>
@@ -87,10 +86,10 @@ function Statement() {
             <Table>
       <thead>
       <tr>
-          <th class="header">Date</th>
-          <th class="header">Description</th>
-          <th class="header">Deposit</th>
-          <th class="header">Withdrawal</th>
+          <th className="header">Date</th>
+          <th className="header">Description</th>
+          <th className="header">Withdrawal</th>
+          <th className="header">Deposit</th>
         </tr>
         <tr>
         <th>{statement.transactions.date1[0].date}</th>

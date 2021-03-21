@@ -6,10 +6,10 @@ class AdminNav extends React.Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/"><span class="logo">jjwa</span></a>
-          <p class='navbar-text-size admin-margin'>(Admin)</p>
+          <a className="navbar-brand" href="/"><span className="logo">jjwa</span></a>
+          <p className='navbar-text-size admin-margin'>(Admin)</p>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-mdb-toggle="collapse"
             data-mdb-target="#navbarNavAltMarkup"
@@ -17,7 +17,7 @@ class AdminNav extends React.Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">

@@ -10,69 +10,69 @@ function Team () {
         
         <Nav />
 
-        <div class="container">
+        <div className="container">
         
-            <div class="row">
-                <div class='text-center header-margin'>
+            <div className="row">
+                <div className='text-center header-margin'>
                     <h1>Hello there! We're: </h1>
                 </div>  
             </div>
-            <div class='row'>
+            <div className='row'>
                 
-                <div class="col-md-7 offset-md-1 ">
+                <div className="col-md-7 offset-md-1 ">
                    
-                    <div class='row about1'>
-                        <div class='col-md-2 text-center'>
-                            <p class='about-logo'>j</p> 
+                    <div className='row about1'>
+                        <div className='col-md-2 text-center'>
+                            <p className='about-logo'>j</p> 
                         </div>
-                        <div class='col-md-10'>
-                        <p class='about-text'>James Coughlin: <span class='email-text'><a href="https://github.com/mrjacoughlin" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
-                        </div>
-                    </div>
-
-                    <div class='row about2'>
-                        <div class='col-md-2 text-center'>
-                            <p class='about-logo'>j</p> 
-                        </div>
-                        <div class='col-md-10'>
-                        <p class='about-text'>Jon Gilbert: <span class='email-text'><a href="https://github.com/JGilb28-7" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
+                        <div className='col-md-10'>
+                        <p className='about-text'>James Coughlin: <span className='email-text'><a href="https://github.com/mrjacoughlin" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
-                    <div class='row about3'>
-                        <div class='col-md-2 text-center'>
-                            <p class='about-logo'>w</p> 
+                    <div className='row about2'>
+                        <div className='col-md-2 text-center'>
+                            <p className='about-logo'>j</p> 
                         </div>
-                        <div class='col-md-10'>
-                            <p class='about-text'>William Appleton: <span class='email-text'><a href="https://github.com/william-appleton" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
+                        <div className='col-md-10'>
+                        <p className='about-text'>Jon Gilbert: <span className='email-text'><a href="https://github.com/JGilb28-7" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
-                    <div class='row about4'>
-                        <div class='col-md-2 text-center'>
-                            <p class='about-logo'>a</p> 
+                    <div className='row about3'>
+                        <div className='col-md-2 text-center'>
+                            <p className='about-logo'>w</p> 
                         </div>
-                        <div class='col-md-10'>
-                        <p class='about-text'>Ala DeCoste: <span class='email-text'><a href="https://github.com/decoste" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
+                        <div className='col-md-10'>
+                            <p className='about-text'>William Appleton: <span className='email-text'><a href="https://github.com/william-appleton" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
+                        </div>
+                    </div>
+
+                    <div className='row about4'>
+                        <div className='col-md-2 text-center'>
+                            <p className='about-logo'>a</p> 
+                        </div>
+                        <div className='col-md-10'>
+                        <p className='about-text'>Ala DeCoste: <span className='email-text'><a href="https://github.com/decoste" target="_blank" rel='noreferrer'>Git Hub Profile</a></span></p>
                         </div>
                     </div>
 
                 </div>
 
-                <div class='col-md-4 d-flex align-items-center'>
+                <div className='col-md-4 d-flex align-items-center'>
                     <img 
-                            class="img-fluid img-margin" 
+                            className="img-fluid img-margin" 
                             src={MoneyPic} 
                             alt="dollar-bills"
                         />
                     </div>
             </div>
 
-            <div class="row">
-                <div class='text-center about-bttm-margin'>
-                    <h1>And welcome to our <br></br> <span class='motto'>j</span>oltingly <span class='motto'>j</span>ubilant <span class='motto'>w</span>ealth <span class='motto'>a</span>pp!</h1>
+            <div className="row">
+                <div className='text-center about-bttm-margin'>
+                    <h1>And welcome to our <br></br> <span className='motto'>j</span>oltingly <span className='motto'>j</span>ubilant <span className='motto'>w</span>ealth <span className='motto'>a</span>pp!</h1>
                     <br></br>
-                    <h3 class='italic'>Where banking is joyful.</h3>
+                    <h3 className='italic'>Where banking is joyful.</h3>
                 </div>  
             </div>
 

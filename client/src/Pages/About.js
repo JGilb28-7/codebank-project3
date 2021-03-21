@@ -10,18 +10,18 @@ function About () {
     <div>
          <Nav />
 
-            <div class='containter'>
-                <div class='row'>
-                    <div class='col-md-6 animate__animated animate__slideInUp'>
+            <div className='containter'>
+                <div className='row'>
+                    <div className='col-md-6 animate__animated animate__slideInUp'>
                         <img 
-                            class="img-fluid padding-btm" 
+                            className="img-fluid padding-btm" 
                             src={moneyPic} 
                             alt="money"
                         />  
                     </div>
-                    <div class='col-md-6 animate__animated animate__slideInDown'>
-                       <h1 class='welcome'>Welcome!</h1>
-                       <p class='about'>
+                    <div className='col-md-6 animate__animated animate__slideInDown'>
+                       <h1 className='welcome'>Welcome!</h1>
+                       <p className='about'>
                             <span><a href='team'>JJWA </a></span>
                         
                            Was started by a group of amazingly brillant, 
@@ -39,14 +39,8 @@ function About () {
                     </div>
                 </div>
             </div>
-
-
         <Footer />
-
     </div>
-
-
     )
 }
-
 export default About;

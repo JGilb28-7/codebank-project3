@@ -1,14 +1,14 @@
-import React from "react";
-// add all imports
+// import React from "react";
+// // add all imports
 
-// function Login()
+// // function Login()
 
-//Log in 
-//User Id
-// Password
-//Button
-    //onclick - enters to the Client.js
+// //Log in 
+// //User Id
+// // Password
+// //Button
+//     //onclick - enters to the Client.js
 
-export default Login;
+// export default Login;
 
-//https://www.w3resource.com/javascript/form/javascript-sample-registration-form-validation.php
+// //https://www.w3resource.com/javascript/form/javascript-sample-registration-form-validation.php
