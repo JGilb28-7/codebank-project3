@@ -7,6 +7,7 @@ import Nav from './Nav/NavBar'
 import Footer from './Footer'
 import './Style/AdminLogin.css'
 import AdminNav from './AdminNav/AdminNav'
+const localStrategy = require('passport-local').Strategy
 
 class AdminLogin extends Component {
     constructor() {

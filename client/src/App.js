@@ -2,17 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Switch } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-/*import Jumbotron from "./components/Jumbotron";
-import Nav from "./components/Nav";
-import Input from "./components/Input";
-import Button from "./components/Button";
-import API from "./utils/API";
-import { RecipeList, RecipeListItem } from "./components/RecipeList";
-import { Container, Row, Col } from "./components/Grid";*/
 import Signup from "./components/Signup";
 import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
-// import Employee from "./Pages/employees";
 import Host from './Pages/Host';
 import Home from './Pages/Home'
 import SignUpForm from "./Pages/Sign-Up-New";

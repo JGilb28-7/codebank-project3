@@ -1,23 +1,27 @@
-//import React, { Component } from 'react'
-//import { Redirect } from 'react-router-dom'
-//import axios from 'axios'
 import React, { useState, useEffect, useContext } from "react";
 import UserContext from '../utils/userContext'
-//import { useParams } from "react-router-dom";
 import Card from "../components/Card";
-//import user from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Button from "../components/Button";
 import Nav from '../components/LogoutNav/index'
-//import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import Footer from "../components/Footer";
 import TransModal from "../components/TransModal/TransModal"
 import Statement from "../components/Statements/Statement";
 
-//import Signup from "../components/Signup"
+// This will display the Clients information
+// Date
+// Account Number (last 4 digits needs to be masked)
+// Account type
+// Account Bal
 
+// Make a deposit
+    // Example a mobile app to take a pic of a check
+    // Transfer from accounts
+    // send $$ to another user by using thier email.. think of Venmo
+// Modal to display the Statment
 
+// Make a Budget 
 
 function Host() {
   const user = useContext(UserContext);
