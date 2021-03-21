@@ -5,7 +5,6 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Nav from './Nav/NavBar'
 import Footer from './Footer'
-const localStrategy = require('passport-local').Strategy
 
 class LoginForm extends Component {
     constructor() {
@@ -28,7 +27,6 @@ class LoginForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        // console.log('handleSubmit')
 
         axios
             .post('/user/login', {
@@ -36,8 +34,6 @@ class LoginForm extends Component {
                 password: this.state.password
             })
             .then(response => {
-                console.log('login response: ')
-                console.log(response)
                 if (response.status === 200) {
                     // update App.js state
                     this.props.updateUser({
@@ -66,16 +62,16 @@ class LoginForm extends Component {
 
                     <Nav />
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col d-flex justify-content-center">
-                                <div class="width">
-                                    <h1 class="login">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col d-flex justify-content-center">
+                                <div className="width">
+                                    <h1 className="login">
                                         Log in
                                     </h1>
                                     <form id="login">  
-                                        <div class="form-group">
-                                            <input class="form-control form-margin"
+                                        <div className="form-group">
+                                            <input className="form-control form-margin"
                                                 type="text"
                                                 id="username"
                                                 name="username"
@@ -84,8 +80,8 @@ class LoginForm extends Component {
                                                 onChange={this.handleChange}
                                             />
                                         </div>
-                                        <div class="form-group">
-                                            <input class="form-control form-margin"
+                                        <div className="form-group">
+                                            <input className="form-control form-margin"
                                                 placeholder="Password"
                                                 type="password"
                                                 name="password"
@@ -94,11 +90,11 @@ class LoginForm extends Component {
                                             />
                                         </div>
                                         <button
-                                            class="btn blue-btn btn-block"
+                                            className="btn blue-btn btn-block"
                                             onClick={this.handleSubmit}
                                             type="submit">Login
                                         </button>
-                                        <p class="signUpPrompt">Or sign up <a href="/signup">here</a>.</p>
+                                        <p className="signUpPrompt">Or sign up <a href="/signup">here</a>.</p>
                                     </form>
                                 </div>
                             </div>

@@ -39,7 +39,6 @@ employeeSchema.pre("save", function (next) {
     console.log("NO PASSWORD PROVIDED");
     next();
   } else {
-    console.log("hashPassword in pre save");
     this.password = this.hashPassword(this.password);
     next();
   }

@@ -9,11 +9,11 @@ function SignUpForm() {
 
             <Nav />
 
-            <div class="container">
-                <div class="row">
-                     <div class="col-md-7 col-md-offset-3">
-                        <h1 class="choosing-to-bank">Thanks for choosing to bank with us!</h1>
-                         <p class="details-font-size">We'll just need a few more details:</p>
+            <div className="container">
+                <div className="row">
+                     <div className="col-md-7 col-md-offset-3">
+                        <h1 className="choosing-to-bank">Thanks for choosing to bank with us!</h1>
+                         <p className="details-font-size">We'll just need a few more details:</p>
                         
                         <FormComp />
                     </div>

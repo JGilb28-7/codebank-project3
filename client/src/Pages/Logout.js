@@ -30,10 +30,10 @@ class Logout extends React.Component {
           : <div>
                 <Nav />
          
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h1 class="mb-3 heading">You have been logged out!</h1>
+                <div className="container">
+                    <div className="row">
+                        <div className="col text-center">
+                            <h1 className="mb-3 heading">You have been logged out!</h1>
                             <p>You will be redirected to the home page in <span>{seconds}</span> second(s)</p>
                         </div>
                     </div>

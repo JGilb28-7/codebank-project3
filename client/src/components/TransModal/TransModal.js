@@ -1,7 +1,5 @@
-import BlockButton from '../BlockButton/BlockButton';
 import React, { useState, useEffect, useContext} from "react";
-import TransContext from '../../utils/TransContext'
-import { Input, TextArea, FormBtn } from "../../components/Form";
+
 function TransModal() {
     const [deposit, setdeposit] = useState({
         amount: 10000,
@@ -14,8 +12,6 @@ function TransModal() {
       function handleInputChange(event) {
         const { name, value, } = event.target;
         setFormObject({...formObject, [name]: value,})
-        console.log("user input" +event.target.value)
-        
       }
     
       function handleFormSubmit(event) {
@@ -58,7 +54,7 @@ function TransModal() {
               
             <button
             type="submit"
-            class="btn blue-btn"
+            className="btn blue-btn"
             data-mdb-toggle="modal"
             data-mdb-target="#exampleModal"
             // onClick={this.handleSubmit}
@@ -68,16 +64,16 @@ function TransModal() {
             </button>
 
             <div
-            class="modal fade"
+            className="modal fade"
             id="exampleModal"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
             >     
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="cntr-txt" id="exampleModalLabel">Transactions</h5>
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="cntr-txt" id="exampleModalLabel">Transactions</h5>
 
                      {/* <p>   {transactions.map((transactions) => {
                               return (
@@ -89,22 +85,22 @@ function TransModal() {
                          </p> */}
                             <button
                             type="button"
-                            class="btn-close"
+                            className="btn-close"
                             data-mdb-dismiss="modal"
                             aria-label="Close"
                             ></button>
                         </div>
-                        <div class="modal-body">
-                            <div class='container'>
-                                <div class='row'>
-                                    <div class='col-md-6'>
+                        <div className="modal-body">
+                            <div className='container'>
+                                <div className='row'>
+                                    <div className='col-md-6'>
                                         <form>
-                                            <div class="form-group form-margin">
+                                            <div className="form-group form-margin">
                                            
-                                            <div class="form-group form-margin">
+                                            <div className="form-group form-margin">
                                                 <input
                                                 type="text"
-                                                class="form-control"
+                                                className="form-control"
                                                 id="trans-amount"
                                                 placeholder="Deposit"
                                                 onChange={handleInputChange}
@@ -113,7 +109,7 @@ function TransModal() {
                                                 <br/>
                                                    <input
                                                 type="text"
-                                                class="form-control"
+                                                className="form-control"
                                                 id="trans-amount"
                                                 placeholder="Withdrawal"
                                                 onChange={handleInputChange}
@@ -128,8 +124,8 @@ function TransModal() {
                                             </div>
                                         </form> 
                                     </div>
-                                    <div class='col-md-6 d-flex align-items-center'>
-                                        <div class='modal-bal'>
+                                    <div className='col-md-6 d-flex align-items-center'>
+                                        <div className='modal-bal'>
                                             <h4><strong>Current Balance:</strong> ${deposit.amount}</h4>
                                             <p id='modal-bal'></p>
                                         </div>

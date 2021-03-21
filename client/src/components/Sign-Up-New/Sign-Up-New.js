@@ -76,10 +76,10 @@ class FormComp extends React.Component {
     render() {
       return    (
         <div onSubmit={this.submitHandler}>
-          <div class="form-group form-margin">
+          <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="firstName-input"
                 placeholder="First Name"
                 name='firstName'
@@ -87,30 +87,30 @@ class FormComp extends React.Component {
               />
             </div>
             {this.state.firstNameError}
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="lastName-input"
                 placeholder="Last Name"
                 name='lastName'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="email-input"
                 placeholder="Email"
                 name='email'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="age-input"
                 placeholder="Age"
                 name='age'
@@ -118,50 +118,50 @@ class FormComp extends React.Component {
               />
             </div>
             {this.state.ageError}
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="Address1-input"
                 placeholder="Address Line 1"
                 name='address1'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="Address2-input"
                 placeholder="Address Line 2 "
                 name='address2'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="city-input"
                 placeholder="City "
                 name='city'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="state-input"
                 placeholder="State "
                 name='state'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="zip-input"
                 placeholder="Zip Code"
                 name='zip'
@@ -169,10 +169,10 @@ class FormComp extends React.Component {
               />
             </div>
             {this.state.zipError}
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="phone-input"
                 placeholder="Phone Number (numbers only)"
                 name='phone'
@@ -180,27 +180,27 @@ class FormComp extends React.Component {
               />
             </div>
             {this.state.phoneError}
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="username-input"
                 placeholder="User Name"
                 name='username'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class="form-group form-margin">
+            <div className="form-group form-margin">
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="password-input"
                 placeholder="Password"
                 name='password'
                 onChange={this.changeHandler}
               />
             </div>
-            <div class='signup-submit'>
+            <div className='signup-submit'>
                 <BlueButton link='/thanks' text='Sign Up' type='submit' />
             </div>
             

@@ -7,7 +7,6 @@ const Transaction = require('../database/models/Transaction')
 
 // route for signing-up a new user
 router.post('/', (req, res) => {
-    console.log('user signup')
 
     const { firstName,
         lastName,
@@ -26,7 +25,7 @@ router.post('/', (req, res) => {
 
     User.findOne({ username: username }, (err, user) => {
         if (err) {
-            console.log('User.js posting error: ', err);
+            console.log(err);
         } else if (user) {
             res.json({
                 error: `Sorry, that username already exists with ${username}`
@@ -57,7 +56,6 @@ router.post('/', (req, res) => {
 })
 
 router.post('/admin/signup', (req, res) => {
-    console.log('employee signup')
 
     const { firstName,
         lastName,
@@ -71,7 +69,7 @@ router.post('/admin/signup', (req, res) => {
 
     Employee.findOne({ username: username }, (err, employee) => {
         if (err) {
-            console.log('Employee.js posting error: ', err);
+            console.log(err);
         } else if (employee) {
             res.json({
                 error: `Sorry, that username already exists with ${username}`
@@ -99,12 +97,10 @@ router.post('/admin/signup', (req, res) => {
 // For logging-in a user who is already signed-up
 router.post('/login',
     (req, res, next) => {
-        console.log(req.body)
         next()
     },
     passport.authenticate('local'),
     (req, res) => {
-        console.log('loggedin', req.user);
         var userInfo = {
             username: req.user.username,
             id: req.user._id,
@@ -116,20 +112,15 @@ router.post('/login',
 
 router.post('/admin/login',
     (req, res, next) => {
-        console.log(req.body)
         next()
     }
 )
-
-// Only a get route to see the user
-
 
 router.get('/host/:id', (req, res, next) => {
 
     User.findById(req.user._id)
         .then(function (users) {
             res.json(users);
-            console.log("ID: " + req.user._id)
         })
         .catch(function (err) {
 
@@ -153,30 +144,29 @@ router.get('/admin', (req, res, next) => {
     )
         .then(function (employees) {
             res.json(employees);
-            console.log("Employee" + employees)
         })
         .catch(function (err) {
         });
 })
 
-router.get('/admin/:id' ,(req, res) => {
-    Employee
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-      console.log("ID" + req.params.id)
-  })
+// router.get('/admin/:id' ,(req, res) => {
+//     Employee
+//       .findById({ _id: req.params.id })
+//       .then(dbModel => dbModel.remove())
+//       .then(dbModel => res.json(dbModel))
+//       .catch(err => res.status(422).json(err));
+//       console.log("ID" + req.params.id)
+//   })
 
-router.post('/test',
-    (req, res) => {
-           User.findById("6051822ef5aade6a18c1f3df")
-        //    .populate("transactions")
-           .then(function (test) {
-               res.json(test)
-           })
-    }
-)
+// router.post('/test',
+//     (req, res) => {
+//            User.findById("6051822ef5aade6a18c1f3df")
+//         //    .populate("transactions")
+//            .then(function (test) {
+//                res.json(test)
+//            })
+//     }
+// )
 
 router.post("/transactions", ({body}, res) => {
     Transaction.create({name: body.name, value: body.value})
@@ -193,7 +183,6 @@ router.post("/transactions", ({body}, res) => {
     Transaction.findById({_id: body._id}) //
         .then(function (trans) {
             res.json(trans);
-            console.log("transactions" + trans)
         })
         .catch(function (err) {
 
@@ -201,8 +190,6 @@ router.post("/transactions", ({body}, res) => {
         });
 })
 
-
-// route for logging out the user. So this router will handle axios.post('/user/logout') request coming from client
 router.post('/logout', (req, res) => {
     if (req.user) {
         res.send({ msg: 'loggging out' })
@@ -211,14 +198,12 @@ router.post('/logout', (req, res) => {
     }
 })
 
-router.get('/admin/signup', (req, res, next) => {
-    console.log(req.body);
+// router.get('/admin/signup', (req, res, next) => {
+//     console.log(req.body);
    
-})
+// })
 
 router.get('/', (req, res, next) => {
-    console.log('*****user*****')
-    console.log(req.user);
     if (req.user) {
         res.json({ user: req.user })
     } else {

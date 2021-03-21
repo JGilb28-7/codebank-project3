@@ -2,17 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Switch } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-/*import Jumbotron from "./components/Jumbotron";
-import Nav from "./components/Nav";
-import Input from "./components/Input";
-import Button from "./components/Button";
-import API from "./utils/API";
-import { RecipeList, RecipeListItem } from "./components/RecipeList";
-import { Container, Row, Col } from "./components/Grid";*/
 import Signup from "./components/Signup";
 import LoginForm from "./components/login-form";
 import { BrowserRouter } from "react-router-dom";
-// import Employee from "./Pages/employees";
 import Host from './Pages/Host';
 import Home from './Pages/Home'
 import SignUpForm from "./Pages/Sign-Up-New";
@@ -33,7 +25,6 @@ class App extends Component {
     };
 
     this.getUser = this.getUser.bind(this);
-    this.getEmployee = this.getEmployee.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateUser = this.updateUser.bind(this);
     this.updateEmployee = this.updateEmployee.bind(this);
@@ -41,7 +32,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getUser();
-    this.getEmployee();
   }
 
   updateUser(userObject) {
@@ -54,31 +44,19 @@ class App extends Component {
 
   getUser() {
     axios.get("/user/").then((response) => {
-      console.log("Get user response: ");
-      console.log(response.data);
-      if (response.data.user) {
-        console.log("Get User: There is a user saved in the server session: ");
-
+      if (response.data.user) {;
         this.setState({
           loggedIn: true,
           username: response.data.user.username,
         });
       }
       else {
-        console.log("Get user: no user");
         this.setState({
           loggedIn: false,
           username: null,
         });
       }
     });
-  }
-
-  
-  getEmployee() {
-    axios.get("/user/admin/signup/").then((response) => {
-      console.log(response.data);
-      })
   }
 
   render() {

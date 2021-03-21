@@ -1,11 +1,8 @@
 
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect} from "react";
 import Card from "../components/Card";
 import { Col, Row, Container } from "../components/Grid";
-import Button from "../components/Button";
-import Nav from '../components/LogoutNav/index'
 import Footer from "../components/Footer";
- import { List, ListItem } from "../components/List";
 import AdminNav from "../components/AdminNav/AdminNav";
 
 function Manager() {
@@ -41,7 +38,7 @@ function Manager() {
               </h2>
 
               <div>
-              <table class="table table-striped">
+              <table className="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">-</th>

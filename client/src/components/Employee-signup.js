@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import './Sign-Up-New/Sign-Up-New.css'
-import Nav from './Nav/NavBar'
 import Footer from './Footer'
 import './Style/Employee-signup.css'
 import AdminNav from './AdminNav/AdminNav'
@@ -33,8 +32,6 @@ class EmployeeSignup extends Component {
 	}
 
 	handleSubmit(event) {
-		console.log('sign-up handleSubmit, username: ')
-		console.log(this.state.username)
 		event.preventDefault()
 
 		//request to server to add a new username/password
@@ -51,7 +48,6 @@ class EmployeeSignup extends Component {
 			confirmPassword: this.state.confirmPassword
 		})
 			.then(response => {
-				console.log(response)
 				if (!response.data.errmsg && (this.state.password === this.state.confirmPassword)) {
 					console.log('successful signup')
 					this.setState({ //redirect to login page
@@ -76,14 +72,14 @@ render() {
 				<div>
 					<AdminNav/>
 
-					<div class="container">
-               			<div class="row">
-                     		<div class="col-md-7 col-md-offset-3">
-                        		<h1 class="choosing-to-bank">Employee signup page!</h1>
-								<div class="form-group form-margin">
+					<div className="container">
+               			<div className="row">
+                     		<div className="col-md-7 col-md-offset-3">
+                        		<h1 className="choosing-to-bank">Employee signup page!</h1>
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="firstName"
 										placeholder="First Name"
 										name='firstName'
@@ -92,10 +88,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="lastName"
 										placeholder="Last Name"
 										name='lastName'
@@ -104,9 +100,9 @@ render() {
 									/>
 								</div>
 
-                                <div class="form-group form-margin">
+                                <div className="form-group form-margin">
 									<select 
-										class="custom-select" 
+										className="custom-select" 
 										id='role-input'
 										name='role'
 										value={this.state.role}
@@ -117,10 +113,10 @@ render() {
 									</select>
 								 </div>
 
-                                <div class="form-group form-margin">
+                                <div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="phone-input"
 										placeholder="Phone (Numbers Only)"
 										name='phone'
@@ -129,10 +125,10 @@ render() {
 									/>
 								</div>
 								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="email"
 										placeholder="Email"
 										name='email'
@@ -141,10 +137,10 @@ render() {
 									/>
 								</div>
 								
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="age"
 										placeholder="Age"
 										name='age'
@@ -153,12 +149,10 @@ render() {
 									/>
 								</div>
 
-					
-
-								 <div class="form-group form-margin">
+								 <div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="gender-input"
 										placeholder="Gender"
 										name='gender'
@@ -167,10 +161,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="text"
-										class="form-control"
+										className="form-control"
 										id="username-input"
 										placeholder="Username"
 										name='username'
@@ -179,10 +173,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="password"
-										class="form-control"
+										className="form-control"
 										id="password-input"
 										placeholder="Password"
 										name='password'
@@ -191,10 +185,10 @@ render() {
 									/>
 								</div>
 
-								<div class="form-group form-margin">
+								<div className="form-group form-margin">
 									<input
 										type="password"
-										class="form-control"
+										className="form-control"
 										id="confirm-password-input"
 										placeholder="Confirm Password"
 										name='confirmPassword'

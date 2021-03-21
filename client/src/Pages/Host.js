@@ -1,23 +1,11 @@
-//import React, { Component } from 'react'
-//import { Redirect } from 'react-router-dom'
-//import axios from 'axios'
 import React, { useState, useEffect, useContext } from "react";
 import UserContext from '../utils/userContext'
-//import { useParams } from "react-router-dom";
 import Card from "../components/Card";
-//import user from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-import Button from "../components/Button";
 import Nav from '../components/LogoutNav/index'
-//import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
 import Footer from "../components/Footer";
 import TransModal from "../components/TransModal/TransModal"
 import Statement from "../components/Statements/Statement";
-
-//import Signup from "../components/Signup"
-
-
 
 function Host() {
   const user = useContext(UserContext);
@@ -71,13 +59,13 @@ function Host() {
         </Row>
         <Row>
           <Col size="md-12">
-            <div class='host-bttm'>
+            <div className='host-bttm'>
             <Card>
             <div>
  
             <button
             type="submit"
-            class="btn blue-btn"
+            className="btn blue-btn"
             data-mdb-toggle="modal"
             data-mdb-target="#statementModal"
             // onClick={this.handleSubmit}
@@ -87,48 +75,42 @@ function Host() {
             </button>
 
             <div
-            class="modal fade"
+            className="modal fade"
             id="statementModal"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="statementModalLabel"
             aria-hidden="true"
             >     
-                <div class="modal-dialog">
+                <div className="modal-dialog">
                   
-                    <div class="modal-content">
+                    <div className="modal-content">
                     <button
                             type="button"
-                            class="btn-close"
+                            className="btn-close"
                             data-mdb-dismiss="modal"
                             aria-label="Close"
                             ></button>
-                        <div class="modal-header">
+                        <div className="modal-header">
                           
-                            <h5 class="cntr-txt" id="statementModal">Month Ended February, 28, 2021</h5>
-                            <p><strong class="logo">JJWA</strong></p>
+                            <h5 className="cntr-txt" id="statementModal">Month Ended February, 28, 2021</h5>
+                            <p><strong className="logo">JJWA</strong></p>
 
                         </div>
-                        <div class="modal-body">
-                            <div class='container'>
-                                <div class='row'>
+                        <div className="modal-body">
+                            <div className='container'>
+                                <div className='row'>
                                     <div >
                                     <form>
-                                            <div class="form-group form-margin">
-                                           
-                                            <div class="form-group form-margin">
-                                              
-
+                                            <div className="form-group form-margin">
+                                            <div className="form-group form-margin">
                                            <Statement></Statement>
-                                               
-          
                                             </div> 
                                          
                                             </div>
                                         </form> 
-                                     
                                     </div>
-                                    <div class='col-md-6 d-flex align-items-center'>
-                                        <div class='modal-bal'>
+                                    <div className='col-md-6 d-flex align-items-center'>
+                                        <div className='modal-bal'>
                                            
                                           
                                         </div>

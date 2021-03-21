@@ -9,11 +9,11 @@ function Thanks () {
         
         <Nav />
 
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h1 class="mb-3 heading">Thank you for signing up!</h1>
-                    <p class="nowLogIn">You can now log in <a href="/login">here</a>.</p>
+        <div className="container">
+            <div className="row">
+                <div className="col text-center">
+                    <h1 className="mb-3 heading">Thank you for signing up!</h1>
+                    <p className="nowLogIn">You can now log in <a href="/login">here</a>.</p>
                 </div>
             </div>
         </div>
